@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: reference_deployment_overview.html 
+keywords: installation, installing, install, setting up, set up, setup, deploy, deployment, c2s, commerical cloud services, ic, intelligence community 
+summary: 开始之前、您可能希望更好地了解部署 OnCommand Cloud Manager 和 Cloud Volumes ONTAP 的选项。 
+---
+= 部署概述
+:toc: macro
+:hardbreaks:
+:toc: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+开始之前、您可能希望更好地了解部署 OnCommand Cloud Manager 和 Cloud Volumes ONTAP 的选项。
+
+
+
+== 安装 Cloud Manager
+
+部署和管理 Cloud Volumes ONTAP 需要 Cloud Manager 软件。您可以在以下任意位置部署 Cloud Manager ：
+
+* Amazon Web Services （ AWS ）
+* Microsoft Azure
+* IBM 云
+* 在您自己的网络中
+
+
+如何部署 Cloud Manager 取决于您选择的位置：
+
+[cols="35,65"]
+|===
+| 位置 | 如何部署 Cloud Manager 
+
+
+| AWS | link:task_getting_started_aws.html["从 NetApp Cloud Central 部署 Cloud Manager"] 
+
+
+| AWS C2S | link:media/c2s.pdf["从 AWS 智能社区市场部署 Cloud Manager"^] 
+
+
+| Azure 通用区域 | link:task_getting_started_azure.html["从 NetApp Cloud Central 部署 Cloud Manager"] 
+
+
+| Azure 政府 | link:task_installing_azure_gov.html["从 Azure 美国政府市场部署 Cloud Manager"] 
+
+
+| Azure 德国 | link:task_installing_azure_germany.html["在 Linux 主机上下载并安装软件"] 
+
+
+| IBM 云 | link:task_installing_linux.html["在 Linux 主机上下载并安装软件"] 
+
+
+| 内部网络 | link:task_installing_linux.html["在 Linux 主机上下载并安装软件"] 
+|===
+
+
+== 云管理器设置
+
+在安装 Cloud Manager 后，您可能需要执行其他设置，例如添加其他云提供商帐户，安装 HTTPS 证书等。
+
+* link:task_adding_cloud_accounts.html["将云提供商帐户添加到 Cloud Manager"]
+* link:task_installing_https_cert.html["安装 HTTPS 证书"]
+* link:task_setting_up_users_tenants.html["设置用户和租户"]
+* link:task_setting_up_kms.html["设置 AWS KMS"]
+
+
+
+
+== Cloud Volumes ONTAP 部署
+
+在启动并运行 Cloud Manager 后、您可以在 AWS 和 Microsoft Azure 中开始部署 Cloud Volumes ONTAP 。
+
+link:task_getting_started_aws.html["AWS 入门"] 和  提供有关快速启动和运行 Cloud Volumes ONTAP 的说明。有关其他帮助信息，请参阅以下内容：
+
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["支持的 Cloud Volumes ONTAP 9.5 配置"^]
+* link:task_planning_your_config.html["规划配置"]
+* link:task_deploying_otc_aws.html["在 AWS 中启动 Cloud Volumes ONTAP"]
+* link:task_deploying_otc_azure.html["在 Azure 中启动 Cloud Volumes ONTAP"]
+

@@ -1,0 +1,123 @@
+---
+sidebar: sidebar 
+permalink: task_provisioning_volume_view.html 
+keywords: NFS volumes, volume view, creating, mounting, provisioning, create, nfs volumes 
+summary: 您可以使用 Cloud Manager 创建 NFS 卷、在 AWS 存储之上提供企业级功能。 
+---
+= 创建和装入 NFS 卷
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用 Cloud Manager 创建 NFS 卷、在 AWS 存储之上提供企业级功能。
+
+
+
+== 创建 NFS 卷
+
+您可以创建连接到单个 AWS 实例或镜像到另一个实例的实例的卷以提供高可用性。
+
+.步骤
+. 在卷选项卡中，单击 * 创建新卷 * 。
+. 在 "Create New Volume" 页面上，选择卷类型：
++
+[cols="15,85"]
+|===
+| 选项 | Description 
+
+
+| 创建卷 | 创建连接到单个 AWS 实例的卷。 
+
+
+| 创建 HA 卷 | 创建一个连接到单个 AWS 实例的卷并镜像到另一个实例以在发生故障时提供高可用性。单击信息图标可查看有关 HA 卷所需实例的其他详细信息。 
+|===
+. 如果选择了创建卷，请指定第一个卷的详细信息，然后单击 * 创建 * 。
++
+下表介绍了可能需要指导的字段：
+
++
+[cols="15,85"]
+|===
+| 字段 | Description 
+
+
+| Size | 卷的最大大小取决于现有存储系统中的可用容量。自动在卷上启用精简配置、这样您就可以创建一个大于当前可用物理存储的卷。在写入数据时，不会预先分配存储空间、而是为每个卷分配空间。 
+
+
+| AWS 磁盘类型  a| 
+您应该选择满足性能和成本要求的磁盘。
+
+** 通用 SSD 磁盘可平衡各种工作负载的成本和性能。性能是根据 IOPS 来定义的。
+** 吞吐量优化的 HDD 磁盘适用于需要以较低的价格快速一致的吞吐量的频繁访问工作负载。
+** 冷 HDD 磁盘用于备份或不经常访问的数据，因为性能非常低。与吞吐量优化的 HDD 磁盘一样、性能也是根据吞吐量来定义的。
+
+
+有关详细信息，请参见 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS 文档： EBS 卷类型"^]。
+
+|===
++
+下图显示了 " 创建卷 " 页面已填充：
+
++
+image:screenshot_volume_view_create.gif["屏幕抓图：显示已填写“创建新卷”页面。"]
+
+. 如果选择了创建 HA 卷，请指定此卷的详细信息，然后单击 * 创建 * 。
++
+下表介绍了可能需要指导的字段：
+
++
+[cols="15,85"]
+|===
+| 字段 | Description 
+
+
+| Size | 卷的最大大小取决于现有存储系统中的可用容量。自动在卷上启用精简配置、这样您就可以创建一个大于当前可用物理存储的卷。在写入数据时，不会预先分配存储空间、而是为每个卷分配空间。 
+
+
+| AWS 磁盘类型  a| 
+您应该选择满足性能和成本要求的磁盘。
+
+** 通用 SSD 磁盘可平衡各种工作负载的成本和性能。性能是根据 IOPS 来定义的。
+** 吞吐量优化的 HDD 磁盘适用于需要快速一致的吞吐量的频繁访问的工作负载。
+
+
+有关详细信息，请参见 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS 文档： EBS 卷类型"^]。
+
+
+
+| 位置 | 您应该选择一个 vPC 、它在三个独立的可用性区域中包含三个子网。 
+
+
+| 节点和调解器 | 如果可能、 Cloud Manager 会为每个实例选择单独的可用性区域、因为它是受支持的最佳配置。 
+
+
+| 浮动 IP | 该区域中所有 VPC 的 IP 地址必须位于 CIDR 块之外。 
+
+
+| 路由表 | 如果有多个路由表、则选择正确的路由表非常重要。否则，某些客户端可能无法访问 HA 对。有关详细信息，请参见  http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS 文档：路由表"^]。 
+|===
++
+下图显示了节点和调解器页面。每个实例都位于单独的可用性区域中。
+
++
+image:screenshot_volume_view_ha_network.gif["屏幕截图：显示两个 Cloud Volumes ONTAP 节点和调解器的 AWS 网络选择。每个实例都位于单独的可用性区域和子网中。"]
+
+
+
+Cloud Manager 可在现有系统或新系统上创建卷。如果需要新系统、则创建卷大约需要 25 分钟。
+
+
+
+== 将卷装入 Linux 主机
+
+创建卷后、应将其装入主机以访问卷。
+
+.步骤
+. 在卷选项卡中，将鼠标光标置于卷上方，选择菜单图标，然后单击 * 挂载 * 。
+. 单击 * 复制 * 。
+. 在 Linux 主机上、通过更改目标目录修改复制的文本、然后输入命令以装入卷。
+

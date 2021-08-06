@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: task_editing_users.html 
+keywords: editing, users, user accounts, modify, modifying, report, notification, password, notification report 
+summary: 您可以通过启用和禁用通知报告在 Cloud Manager 中修改用户帐户。 
+---
+= 编辑用户帐户
+:hardbreaks:
+:backend-html5-doctype-book: 
+:basebackend-html-doctype-book: 
+:doctype-book: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以通过启用和禁用通知报告在 Cloud Manager 中修改用户帐户。
+
+必须在中更改密码和用户信息 https://cloud.netapp.com["NetApp Cloud Central"^]。
+
+.步骤
+. 在 Cloud Manager 控制台的右上角，单击用户图标，然后选择 * 查看用户 * 。
+. 选择行末尾的菜单图标，然后单击 * 编辑用户 * 。
++
+image:screenshot_edit_user.gif["屏幕抓图：显示用于编辑用户帐户的菜单。菜单位于用户名旁边。"]
+
+. 在 " 用户设置 " 页中，修改用户帐户。
+

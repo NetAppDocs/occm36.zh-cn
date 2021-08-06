@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: task_launching_aws_mktp.html 
+keywords: install, installation, installing, marketplace, aws, launch, launching, ec2 console 
+summary: 最好使用 NetApp Cloud Central 在 AWS 中启动 Cloud Manager 、但如果需要，您可以从 AWS Marketplace 启动它。 
+---
+= 从 AWS Marketplace 启动 Cloud Manager
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+最好使用在 AWS 中启动 Cloud Manager https://cloud.netapp.com["NetApp Cloud Central"^]，但如果需要，您可以从 AWS Marketplace 启动它。
+
+
+TIP: 如果您从 AWS Marketplace 启动 Cloud Manager 、 Cloud Manager 仍与 NetApp Cloud Central 集成。 link:concept_cloud_central.html["了解有关集成的更多信息。"]。
+
+以下步骤介绍了如何从 EC2 控制台启动实例，因为控制台允许您将 IAM 角色附加到 Cloud Manager 实例。使用一键式选项无法实现这一点。
+
+.步骤
+. 为 EC2 实例创建 IAM 策略和角色：
++
+.. 从以下位置下载 Cloud Manager IAM 策略：
++
+https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Manager ： AWS 和 Azure 策略"^]
+
+.. 从 IAM 控制台，通过从 Cloud Manager IAM 策略复制和粘贴文本来创建您自己的策略。
+.. 创建角色类型为 Amazon EC2 的 IAM 角色，并将您在上一步骤中创建的策略附加到该角色。
+
+
+. 转至 https://aws.amazon.com/marketplace/pp/B018REK8QG["AWS Marketplace 上的 Cloud Manager 页面"^]。
+. 单击 * 继续 * 。
+. 在自定义启动选项卡上，单击您所在地区的 * 使用 EC2 控制台启动 * ，然后进行选择：
++
+.. 根据区域可用性，选择 T3.medium （建议）， T2.medium 或 M4.large 实例类型。
+.. 选择一个 VPC 、子网、 IAM 角色和其他符合您要求的配置选项。
+.. 保留默认存储选项。
+.. 如果需要，输入实例的标签。
+.. 为 Cloud Manager 实例指定所需的连接方法： SSH 、 HTTP 和 HTTPS 。
+.. 单击 * 启动 * 。
+
+
+
+
+AWS 使用指定的设置启动软件。云管理器实例和软件应在大约五分钟内运行。
+
+通过在 Web 浏览器中输入公用 IP 地址或私有 IP 地址登录到 Cloud Manager ，然后完成安装向导。

@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: concept_overview.html 
+keywords: overview, concepts, features, use case 
+summary: OnCommand Cloud Manager 使您可以部署 Cloud Volumes ONTAP 、该功能为您的云存储提供企业级功能、并可以轻松地跨基于 NetApp 构建的混合云复制数据。 
+---
+= Cloud Manager 和 Cloud Volumes ONTAP 概述
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+OnCommand Cloud Manager 使您可以部署 Cloud Volumes ONTAP 、该功能为您的云存储提供企业级功能、并可以轻松地跨基于 NetApp 构建的混合云复制数据。
+
+
+
+== 云管理器
+
+构建云管理器时充分考虑了简单性。它可指导您完成 Cloud Volumes ONTAP 设置的几个步骤，通过简化存储配置和自动化容量管理简化数据管理，并支持在混合云中拖放数据复制等。
+
+需要使用 Cloud Manager 来部署和管理 Cloud Volumes ONTAP 、但它还可以发现并配置内部 ONTAP 集群的存储。这为您的云和内部存储基础架构提供了一个中央控制点。
+
+您可以在云或网络中运行 Cloud Manager —只需连接到要部署 Cloud Volumes ONTAP 的网络即可。下图显示了在 AWS 中运行的 Cloud Manager 以及在 AWS 和 Azure 中管理 Cloud Volumes ONTAP 系统。它还显示了跨混合云的数据复制。
+
+image:diagram_cloud_manager_overview.png["显示了 Cloud Manager 可在混合云中管理的组件：为 EC2 计算提供 EBS 存储的 Cloud Volumes ONTAP 系统，为虚拟机提供 Azure 存储的 Cloud Volumes ONTAP 系统以及在混合云和多云环境中进行数据复制。"]
+
+https://www.netapp.com/us/products/data-infrastructure-management/cloud-manager.aspx["了解有关 Cloud Manager 的更多信息"^]
+
+
+
+== Cloud Volumes ONTAP
+
+Cloud Volumes ONTAP 是一款纯软件存储设备、它在云中运行 ONTAP 数据管理软件。您可以将 Cloud Volumes ONTAP 用于生产工作负载、灾难恢复、 DevOps 、文件共享和数据库管理。
+
+Cloud Volumes ONTAP 通过以下关键功能将企业存储扩展到云：
+
+* 存储效率利用内置的重复数据删除、数据压缩、精简配置和克隆来最大限度地降低存储成本。
+* 高可用性可确保在云环境发生故障时企业级可靠性和持续运行。
+* Data Replication Cloud Volumes ONTAP 利用 NetApp 行业领先的复制技术 SnapMirror 将内部数据复制到云中、以便在多个使用案例中轻松获得二级副本。
+* 数据分层可按需在高性能存储池和低性能存储池之间切换，而无需使应用程序脱机。
+* 应用程序一致性使用 NetApp SnapCenter 确保 NetApp Snapshot 副本的一致性。
+
+
+
+NOTE: Cloud Volumes ONTAP 附带了 ONTAP 功能许可证，但 NetApp 卷加密除外。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["查看支持的 Cloud Volumes ONTAP 配置"^]
+
+https://www.netapp.com/us/cloud/ontap-cloud-native-product-details["了解有关 Cloud Volumes ONTAP 的更多信息"^]

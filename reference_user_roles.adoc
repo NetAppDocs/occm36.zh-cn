@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: reference_user_roles.html 
+keywords: user, role, task, permission, permissions, tasks, roles, admin, cloud manager admin, admin, tenant admin, working environment admin 
+summary: 每个云管理器用户帐户都分配有一个定义权限的角色。 
+---
+= 用户角色
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+每个云管理器用户帐户都分配有一个定义权限的角色。
+
+[cols="25,25,25,25"]
+|===
+| 任务 | 云管理器管理员 | 租户管理员 | 工作环境管理员 
+
+
+| 管理租户 | 是的。 | 否 | 否 
+
+
+| 管理工作环境 | 是的。 | 是、对于分配的租户 | 是的、适用于分配的工作环境 
+
+
+| 将工作环境与云同步集成在一起 | 是的。 | 是的。 | 否 
+
+
+| 查看数据复制状态 | 是的。 | 是、对于分配的租户 | 是的、适用于分配的工作环境 
+
+
+| 查看时间表 | 是的。 | 是的。 | 是的。 
+
+
+| 创建和删除用户帐户 | 是的。 | 是、对于分配的租户 | 否 
+
+
+| 修改用户帐户 | 是的。 | 是、对于分配的租户 | 是的、用于他们自己的帐户 
+
+
+| 管理帐户设置 | 是的。 | 否 | 否 
+
+
+| 设置 Kubernetes | 是的。 | 否 | 否 
+
+
+| 在存储系统视图和卷视图之间切换 | 是的。 | 否 | 否 
+
+
+| 修改设置 | 是的。 | 否 | 否 
+
+
+| 查看和管理支持仪表板 | 是的。 | 否 | 否 
+
+
+| 备份和还原 Cloud Manager | 是的。 | 否 | 否 
+
+
+| 删除工作环境 | 是的。 | 否 | 否 
+
+
+| 更新 Cloud Manager | 是的。 | 否 | 否 
+
+
+| 安装 HTTPS 证书 | 是的。 | 否 | 否 
+
+
+| 设置 Active Directory | 是的。 | 否 | 否 
+
+
+| 启用云存储自动化报告 | 是的。 | 否 | 否 
+|===

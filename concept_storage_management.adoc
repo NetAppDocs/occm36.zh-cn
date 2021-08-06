@@ -1,0 +1,214 @@
+---
+sidebar: sidebar 
+permalink: concept_storage_management.html 
+keywords: tenants, provisioning, volume view, working environments, capacity management, storage provisioning, manual, automatic, advanced allocation, aggregates, thin provisioning, free space, mode, tenants, isolate, isolation, cloud manager admin, admin, tenant admin, working environment admin, volume view, paygo, license, upgrade 
+summary: Cloud Manager 通过购买为 Cloud Volumes ONTAP 配置卷所需的 AWS 和 Azure 存储，简化了存储配置。 
+---
+= 存储管理
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager 可简化和高级管理 Cloud Volumes ONTAP 存储。
+
+
+IMPORTANT: 必须直接从 Cloud Manager 创建和删除所有磁盘和聚合。不应从其他管理工具执行这些操作。这样做可能会影响系统稳定性、妨碍将来添加磁盘的能力、并可能产生冗余云提供商费用。
+
+
+
+== 存储配置
+
+通过为您购买磁盘和管理聚合、 Cloud Manager 可以轻松地为 Cloud Volumes ONTAP 进行存储配置。您只需创建卷即可。如果需要，您可以使用高级分配选项自行配置聚合。
+
+
+
+=== 简化配置
+
+聚合可为卷提供云存储。当您启动实例以及配置其他卷时、 Cloud Manager 会为您创建聚合。
+
+创建卷时、 Cloud Manager 会执行以下三项操作之一：
+
+* 它将卷放置在现有聚合上、该聚合具有足够的可用空间。
+* 它通过为该聚合购买更多磁盘将卷放在现有聚合上。
+* 它为新聚合购买磁盘并将卷置于该聚合上。
+
+
+Cloud Manager 通过查看以下几个因素来确定放置新卷的位置：聚合的最大大小，是否已启用精简配置以及聚合的可用空间阈值。
+
+
+TIP: Cloud Manager 管理员可以从 * 设置 * 页面修改可用空间阈值。
+
+
+
+==== AWS 中聚合的磁盘大小选择
+
+当 Cloud Manager 在 AWS 中为 Cloud Volumes ONTAP 创建新聚合时，随着系统中聚合的数量的增加，它会逐渐增加聚合中的磁盘大小。Cloud Manager 这样做是为了确保您可以在系统容量达到 AWS 允许的最大数据磁盘数之前利用系统的最大容量。
+
+例如、 Cloud Manager 可能会为 Cloud Volumes ONTAP Premium 或 BYOL 系统中的聚合选择以下磁盘大小：
+
+[cols="3*"]
+|===
+| 聚合编号 | Disk size | 最大聚合容量 
+
+
+| 1. | 500 MB | 3 TB 
+
+
+| 4. | 1 TB | 6 TB 
+
+
+| 6. | 2 TB | 12 TB 
+|===
+您可以使用高级分配选项自行选择磁盘大小。
+
+
+
+=== 高级分配
+
+您可以自己管理聚合而不是让云管理器为您管理聚合。 link:task_provisioning_storage.html#creating-aggregates["从 * 高级分配 * 页面"]，您可以创建包含特定数量磁盘的新聚合，向现有聚合添加磁盘以及在特定聚合中创建卷。
+
+
+
+== 容量管理
+
+云管理器管理员可以选择云管理器是通知您存储容量决策、还是云管理器自动管理您的容量需求。这可能有助于您了解这些模式的工作原理。
+
+
+
+=== 自动容量管理
+
+如果 Cloud Manager 管理员将容量管理模式设置为自动，则在需要更多容量时， Cloud Manager 会自动为 Cloud Volumes ONTAP 实例购买新磁盘，删除未使用的磁盘集合（聚合），根据需要在聚合之间移动卷以及尝试解除磁盘故障。
+
+以下示例说明了此模式的工作原理：
+
+* 如果具有 5 个或更少 EBS 磁盘的聚合达到容量阈值、则 Cloud Manager 会自动为该聚合购买新磁盘、以便卷可以继续增长。
+* 如果具有 12 个 Azure 磁盘的聚合达到容量阈值、 Cloud Manager 会自动将卷从该聚合移动到具有可用容量的聚合或新聚合。
++
+如果 Cloud Manager 为卷创建新聚合，则它会选择一个可容纳该卷大小的磁盘大小。
+
++
+请注意，可用空间现在在原始聚合上可用。现有卷或新卷可以使用该空间。在此方案中，空间不能返回到 AWS 或 Azure 。
+
+* 如果聚合包含的卷不超过 12 小时、 Cloud Manager 将删除该卷。
+
+
+
+
+=== 手动容量管理
+
+如果云管理器管理员将容量管理模式设置为“手动”，则在必须做出容量决策时，云管理器会显示所需的操作消息。自动模式中描述的相同示例适用于手动模式，但您可以接受这些操作。
+
+
+
+== 使用租户隔离存储
+
+利用 Cloud Manager ，您可以在称为租户的隔离组中配置和管理存储。您需要决定如何在租户之间组织云管理器用户及其工作环境。
+
+
+
+=== 工作环境
+
+Cloud Manager 将存储系统表示为 _ 工作环境 _ 。工作环境是以下任意一种：
+
+* 单个 Cloud Volumes ONTAP 系统或 HA 对
+* 网络中的内部 ONTAP 集群
+* NetApp 私有存储配置中的 ONTAP 集群
+
+
+下图显示了 Cloud Volumes ONTAP 工作环境：
+
+image:screenshot_working_env.gif["屏幕截图：显示 Cloud Volumes ONTAP 存储的 Cloud Volumes ONTAP 工作环境。"]
+
+
+
+=== Tenants
+
+租户 _ 可将工作环境隔离在组中。您可以在租户中创建一个或多个工作环境。下图显示了在 Cloud Manager 中定义的三个租户：
+
+image:screenshot_tenants.gif["屏幕截图：租户页面，其中显示了三个已定义的租户。"]
+
+
+
+=== 租户和工作环境的用户管理
+
+Cloud Manager 用户可以管理的租户和工作环境取决于用户角色和分配。三个不同的用户角色如下：
+
+云管理器管理员:: 管理产品并可访问所有租户和工作环境。
+租户管理员:: 管理单个租户。可以创建和管理租户中的所有工作环境和用户。
+工作环境管理员:: 可以在租户中创建和管理一个或多个工作环境。
+
+
+
+
+=== 如何创建租户和用户的示例
+
+如果您的组织有独立运作的部门、最好为每个部门都设置一个租户。
+
+例如，您可以为三个不同的部门创建三个租户。然后，您将为每个租户创建一个租户管理员。在每个租户中，管理工作环境的一个或多个工作环境管理员。下图描述了此方案：
+
+image:diagram_users_and_tenants.png["此图显示了一个 Cloud Manager 管理员，三个租户管理员和三个租户，其中包括多个工作环境以及负责管理这些工作环境的工作环境管理员。"]
+
+
+
+== 使用卷视图简化存储管理
+
+Cloud Manager 提供了一个单独的管理视图，称为 _Volume View_ ，进一步简化了 AWS 中的存储管理。
+
+卷视图使您可以在 AWS 中简单地指定所需的 NFS 卷、然后由 Cloud Manager 处理其余的卷：它可以根据需要部署 Cloud Volumes ONTAP 系统、并在卷增长时做出容量分配决策。此视图为您提供了云中企业级存储的优势、存储管理非常少。
+
+下图显示了在卷视图中与 Cloud Manager 交互的方式：
+
+image:diagram_volume_view_overview.png["这是卷视图工作原理的概念图像。有四个标注。数字 1 指向卷。第 2 个点指向 Cloud Volumes ONTAP 存储系统和底层 EBS 存储。第 3 个点指向主机可用的卷。第 4 点指向 Cloud Volumes ONTAP 系统和底层存储。"]
+
+. 创建 NFS 卷。
+. Cloud Manager 在 AWS 中为新卷启动 Cloud Volumes ONTAP 实例，或者在现有实例上创建卷。它还为卷购买了物理 EBS 存储。
+. 您可以将卷提供给主机和应用程序。
+. 随着卷的增长、云管理器会做出容量分配决策。
++
+这意味着您只需与卷（左侧的映像）交互、而 Cloud Manager 则可以与存储系统及其底层存储（右侧的映像）交互。
+
+
+
+
+
+=== 为初始卷分配云资源
+
+创建第一个卷时、 Cloud Manager 会在 AWS 中启动 Cloud Volumes ONTAP 实例或 Cloud Volumes ONTAP HA 对并为卷购买 Amazon EBS 存储：
+
+image:diagram_volume_view_resources.png["此概念映像显示了 Cloud Manager 为初始卷创建的 AWS 资源：实例类型为 M4.xLarge 或 M4.2xLarge 的 Cloud Volumes ONTAP 实例以及 1 到 4 个 1 TB EBS 加密磁盘。"]
+
+初始卷的大小决定了 EC2 实例类型和 EBS 磁盘的数量。
+
+
+NOTE: 根据初始卷大小、 Cloud Manager 会启动 Cloud Volumes ONTAP Explore 或 Standard 实例。随着卷的增长， Cloud Manager 可能会提示您更改 AWS 实例，这意味着它需要将实例的许可证升级到标准版或高级版。升级可增加 EBS 的原始容量限制、从而允许卷增长。
+
+
+NOTE: Cloud Manager 不会在卷视图中启动 Cloud Volumes ONTAP BYOL 实例。如果您购买了 Cloud Volumes ONTAP 许可证，则应在 Storage System View 中使用 Cloud Manager 。
+
+
+
+=== 为其他卷分配云资源
+
+创建其他卷时、 Cloud Manager 会在现有 Cloud Volumes ONTAP 实例或新的 Cloud Volumes ONTAP 实例上创建卷。如果现有实例的 AWS 位置和磁盘类型与请求的卷匹配，并且空间充足，则 Cloud Manager 可以在现有实例上创建卷。
+
+
+
+=== NetApp 存储效率功能和存储成本
+
+Cloud Manager 可自动在所有卷上启用 NetApp 存储效率功能。这些效率可以减少您所需的存储总量。您可能会看到分配的容量与购买的 AWS 容量之间存在差异、这可能会导致存储成本节省。
+
+
+
+=== 云管理器自动处理的容量分配决策
+
+* 当超过容量阈值时， Cloud Manager 会购买额外的 EBS 磁盘。当卷增长时会发生这种情况。
+* 如果磁盘在 12 小时内没有卷，则 Cloud Manager 会删除未使用的 EBS 磁盘集。
+* 云管理器在磁盘组之间移动卷以避免容量问题。
++
+在某些情况下，这需要购买额外的 EBS 磁盘。它还可以释放原始磁盘集上的空间以用于新卷和现有卷。
+
+

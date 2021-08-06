@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: reference_before.html 
+keywords: prerequisites, requirements, before 
+summary: 在使用 Cloud Manager 创建和管理 Cloud Volumes ONTAP 系统之前、您的云管理器管理员应已准备好网络并安装和设置了 Cloud Manager 。 
+---
+= 在创建 Cloud Volumes ONTAP 系统之前
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在使用 Cloud Manager 创建和管理 Cloud Volumes ONTAP 系统之前、您的云管理器管理员应已准备好网络并安装和设置了 Cloud Manager 。
+
+管理员应按照说明启动并运行 link:task_getting_started_aws.html["在 AWS 中"] 或 和（可选） 。
+
+在开始部署 Cloud Volumes ONTAP 之前应存在以下条件：
+
+* 针对 Cloud Manager 和 Cloud Volumes ONTAP ，满足了 AWS 和 Azure 网络要求。
+* Cloud Manager 有权代表您在 AWS 和 Azure 中执行操作。
+* 用户将要部署的每个 Cloud Volumes ONTAP 产品都是通过 AWS Marketplace 订阅的。
+* 已安装云管理器。
+* （可选）定义了其他租户。
+* （可选）创建了其他用户帐户、其中可以包括租户管理员和工作环境管理员。
+

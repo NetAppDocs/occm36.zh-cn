@@ -1,0 +1,359 @@
+---
+sidebar: sidebar 
+permalink: reference_security_groups_azure.html 
+keywords: security group, security groups, rules, ports, azure, inbound, outbound, rules 
+summary: Cloud Manager 创建了 Azure 安全组、其中包括 Cloud Manager 和 Cloud Volumes ONTAP 成功运行所需的入站和出站规则。您可能需要参考端口进行测试，或者需要使用自己的端口。 
+---
+= Azure 的安全组规则
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager 创建了 Azure 安全组、其中包括 Cloud Manager 和 Cloud Volumes ONTAP 成功运行所需的入站和出站规则。您可能希望参考这些端口进行测试或使用自己的安全组。
+
+
+
+== 云管理器规则
+
+Cloud Manager 的安全组需要入站和出站规则。
+
+
+
+=== 云管理器的入站规则
+
+预定义安全组中入站规则的源代码为 0.0.0.0/0 。
+
+[cols="10,10,80"]
+|===
+| 协议 | Port | 目的 
+
+
+| SSH | 22. | 提供对云管理器主机的 SSH 访问 
+
+
+| HTTP | 80 | 提供从客户端 Web 浏览器到云管理器 Web 控制台的 HTTP 访问 
+
+
+| HTTPS | 443. | 提供从客户端 Web 浏览器到云管理器 Web 控制台的 HTTPS 访问 
+|===
+
+
+=== 云管理器的出站规则
+
+为 Cloud Manager 预定义的安全组将打开所有出站流量。如果可以接受，请遵循基本出站规则。如果您需要更严格的规则、请使用高级出站规则。
+
+
+
+==== 基本外向规则
+
+为 Cloud Manager 预定义的安全组包括以下出站规则。
+
+[cols="20,20,60"]
+|===
+| 协议 | Port | 目的 
+
+
+| 所有 TCP | 全部 | 所有出站流量 
+
+
+| 所有 UDP | 全部 | 所有出站流量 
+|===
+
+
+==== 高级出站规则
+
+如果您需要严格的出站流量规则、则可以使用以下信息仅打开 Cloud Manager 出站通信所需的端口。
+
+
+NOTE: 源 IP 地址是 Cloud Manager 主机。
+
+[cols="5*"]
+|===
+| 服务 | 协议 | Port | 目标 | 目的 
+
+
+.9+| Active Directory | TCP | 88 | Active Directory 目录林 | Kerberos V 身份验证 
+
+
+| TCP | 139. | Active Directory 目录林 | NetBIOS 服务会话 
+
+
+| TCP | 389. | Active Directory 目录林 | LDAP 
+
+
+| TCP | 445 | Active Directory 目录林 | Microsoft SMB/CIFS over TCP （通过 TCP ）和 NetBIOS 成帧 
+
+
+| TCP | 464. | Active Directory 目录林 | Kerberos V 更改和设置密码（ set_change ） 
+
+
+| TCP | 749 | Active Directory 目录林 | Active Directory Kerberos V 更改和设置密码（ RPCSEC_GSS ） 
+
+
+| UDP | 137. | Active Directory 目录林 | NetBIOS 名称服务 
+
+
+| UDP | 138. | Active Directory 目录林 | NetBIOS 数据报服务 
+
+
+| UDP | 464. | Active Directory 目录林 | Kerberos 密钥管理 
+
+
+| API 调用和 AutoSupport | HTTPS | 443. | 出站 Internet 和 ONTAP 集群管理 LIF | API 调用 AWS 和 ONTAP 、并将 AutoSupport 消息发送到 NetApp 
+
+
+| API 调用 | TCP | 3000 | ONTAP 集群管理 LIF | API 调用 ONTAP 
+
+
+| DNS | UDP | 53. | DNS | 用于云管理器进行 DNS 解析 
+|===
+
+
+== Cloud Volumes ONTAP 的规则
+
+Cloud Volumes ONTAP 的安全组需要入站和出站规则。
+
+
+
+=== 单节点系统的入站规则
+
+[cols="8,13,8,8,13,13,8,27"]
+|===
+| 优先级 | Name | Port | 协议 | 源 | 目标 | Action | Description 
+
+
+| 1000 | inbound_ssh | 22. | TCP | 任意 | 任意 | 允许 | SSH 访问集群管理 LIF 或节点管理 LIF 的 IP 地址 
+
+
+| 1001. | inbound_http | 80 | TCP | 任意 | 任意 | 允许 | 使用集群管理 LIF 的 IP 地址对系统管理器 Web 控制台进行 HTTP 访问 
+
+
+| 1002. | Inbound_111_tcp | 111. | TCP | 任意 | 任意 | 允许 | 远程过程调用 NFS 
+
+
+| 1003. | 入站 _111_UDP | 111. | UDP | 任意 | 任意 | 允许 | 远程过程调用 NFS 
+
+
+| 1004. | Inbound_139 | 139. | TCP | 任意 | 任意 | 允许 | 用于 CIFS 的 NetBIOS 服务会话 
+
+
+| 1005 | Inbound_161-162_TCP | 161-162. | TCP | 任意 | 任意 | 允许 | 简单网络管理协议 
+
+
+| 1006 | Inbound_161-162_UDP | 161-162. | UDP | 任意 | 任意 | 允许 | 简单网络管理协议 
+
+
+| 1007. | Inbound_443 | 443. | TCP | 任意 | 任意 | 允许 | 使用集群管理 LIF 的 IP 地址对 System Manager Web 控制台进行 HTTPS 访问 
+
+
+| 1008. | Inbound_445 | 445 | TCP | 任意 | 任意 | 允许 | Microsoft SMB/CIFS over TCP （通过 TCP ）和 NetBIOS 成帧 
+
+
+| 1009 | Inbound_635_tcp | 635 | TCP | 任意 | 任意 | 允许 | NFS 挂载 
+
+
+| 1010 | 入站 _635_UDP | 635 | TCP | 任意 | 任意 | 允许 | NFS 挂载 
+
+
+| 1011. | Inbound_749 | 749 | TCP | 任意 | 任意 | 允许 | Kerberos 
+
+
+| 1012 | Inbound_2049_tcp | 2049. | TCP | 任意 | 任意 | 允许 | NFS 服务器守护进程 
+
+
+| 1013 | 入站 _2049_UDP | 2049. | UDP | 任意 | 任意 | 允许 | NFS 服务器守护进程 
+
+
+| 1014 | Inbound_3260 | 3260 | TCP | 任意 | 任意 | 允许 | 通过 iSCSI 数据 LIF 进行 iSCSI 访问 
+
+
+| 1015 | Inbound_4045-4046_tcp | 4045-4046 | TCP | 任意 | 任意 | 允许 | NFS 锁定守护进程和网络状态监控器 
+
+
+| 1016. | 入站 _4045-4046_UDP | 4045-4046 | UDP | 任意 | 任意 | 允许 | NFS 锁定守护进程和网络状态监控器 
+
+
+| 1017 | 入站 _10000 | 10000 | TCP | 任意 | 任意 | 允许 | 使用 NDMP 备份 
+
+
+| 1018 | Inbound_11104-11105 | 11104-11105 | TCP | 任意 | 任意 | 允许 | SnapMirror 数据传输 
+
+
+| 3000 | inbound_deny _all_tcp | 任意 | TCP | 任意 | 任意 | 拒绝 | 阻止所有其他 TCP 入站流量 
+
+
+| 3001 | inbound_deny _all_udp | 任意 | UDP | 任意 | 任意 | 拒绝 | 阻止所有其他 UDP 入站流量 
+
+
+| 65000 | AllowVnetInBound | 任意 | 任意 | VirtualNetwork | VirtualNetwork | 允许 | vNet 中的入站流量 
+
+
+| 65001 | AllowAzureLoad BalancerInBound | 任意 | 任意 | AzureLoadBalancer | 任意 | 允许 | 来自 Azure 标准负载平衡器的数据流量 
+
+
+| 65500 | DenyAllInBound | 任意 | 任意 | 任意 | 任意 | 拒绝 | 阻止所有其他入站流量 
+|===
+
+
+=== HA 系统的入站规则
+
+
+NOTE: 与单节点系统相比， HA 系统的入站规则更少，因为入站数据流量通过 Azure 标准负载平衡器。因此，来自负载平衡器的流量应处于打开状态，如 "AllowAzureLoadBalancerInBound" 规则中所示。
+
+[cols="8,13,8,8,13,13,8,27"]
+|===
+| 优先级 | Name | Port | 协议 | 源 | 目标 | Action | Description 
+
+
+| 100 | Inbound_443 | 443. | 任意 | 任意 | 任意 | 允许 | 使用集群管理 LIF 的 IP 地址对 System Manager Web 控制台进行 HTTPS 访问 
+
+
+| 101. | Inbound_111_tcp | 111. | 任意 | 任意 | 任意 | 允许 | 远程过程调用 NFS 
+
+
+| 102. | Inbound_2049_tcp | 2049. | 任意 | 任意 | 任意 | 允许 | NFS 服务器守护进程 
+
+
+| 111. | inbound_ssh | 22. | 任意 | 任意 | 任意 | 允许 | SSH 访问集群管理 LIF 或节点管理 LIF 的 IP 地址 
+
+
+| 121. | inbound_53 | 53. | 任意 | 任意 | 任意 | 允许 | DNS 和 CIFS 
+
+
+| 65000 | AllowVnetInBound | 任意 | 任意 | VirtualNetwork | VirtualNetwork | 允许 | vNet 中的入站流量 
+
+
+| 65001 | AllowAzureLoad BalancerInBound | 任意 | 任意 | AzureLoadBalancer | 任意 | 允许 | 来自 Azure 标准负载平衡器的数据流量 
+
+
+| 65500 | DenyAllInBound | 任意 | 任意 | 任意 | 任意 | 拒绝 | 阻止所有其他入站流量 
+|===
+
+
+=== Cloud Volumes ONTAP 的出站规则
+
+为 Cloud Volumes ONTAP 预定义的安全组将打开所有出站流量。如果可以接受，请遵循基本出站规则。如果您需要更严格的规则、请使用高级出站规则。
+
+
+
+==== 基本外向规则
+
+为 Cloud Volumes ONTAP 预定义的安全组包括以下出站规则。
+
+[cols="20,20,60"]
+|===
+| 协议 | Port | 目的 
+
+
+| 所有 TCP | 全部 | 所有出站流量 
+
+
+| 所有 UDP | 全部 | 所有出站流量 
+|===
+
+
+==== 高级出站规则
+
+如果您需要严格的出站流量规则、则可以使用以下信息仅打开 Cloud Volumes ONTAP 出站通信所需的端口。
+
+
+NOTE: 源是 Cloud Volumes ONTAP 系统上的接口（ IP 地址）。
+
+[cols="10,10,10,20,20,40"]
+|===
+| 服务 | 协议 | Port | 源 | 目标 | 目的 
+
+
+.18+| Active Directory | TCP | 88 | 节点管理 LIF | Active Directory 目录林 | Kerberos V 身份验证 
+
+
+| UDP | 137. | 节点管理 LIF | Active Directory 目录林 | NetBIOS 名称服务 
+
+
+| UDP | 138. | 节点管理 LIF | Active Directory 目录林 | NetBIOS 数据报服务 
+
+
+| TCP | 139. | 节点管理 LIF | Active Directory 目录林 | NetBIOS 服务会话 
+
+
+| TCP | 389. | 节点管理 LIF | Active Directory 目录林 | LDAP 
+
+
+| TCP | 445 | 节点管理 LIF | Active Directory 目录林 | Microsoft SMB/CIFS over TCP （通过 TCP ）和 NetBIOS 成帧 
+
+
+| TCP | 464. | 节点管理 LIF | Active Directory 目录林 | Kerberos V 更改和设置密码（ set_change ） 
+
+
+| UDP | 464. | 节点管理 LIF | Active Directory 目录林 | Kerberos 密钥管理 
+
+
+| TCP | 749 | 节点管理 LIF | Active Directory 目录林 | Kerberos V 更改和设置密码（ RPCSEC_GSS ） 
+
+
+| TCP | 88 | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | Kerberos V 身份验证 
+
+
+| UDP | 137. | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | NetBIOS 名称服务 
+
+
+| UDP | 138. | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | NetBIOS 数据报服务 
+
+
+| TCP | 139. | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | NetBIOS 服务会话 
+
+
+| TCP | 389. | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | LDAP 
+
+
+| TCP | 445 | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | Microsoft SMB/CIFS over TCP （通过 TCP ）和 NetBIOS 成帧 
+
+
+| TCP | 464. | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | Kerberos V 更改和设置密码（ set_change ） 
+
+
+| UDP | 464. | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | Kerberos 密钥管理 
+
+
+| TCP | 749 | 数据 LIF （ NFS 、 CIFS ） | Active Directory 目录林 | Kerberos V 更改和设置密码（ RPCSEC_GSS ） 
+
+
+| DHCP | UDP | 68 | 节点管理 LIF | DHCP | 首次设置 DHCP 客户端 
+
+
+| DHCP | UDP | 67 | 节点管理 LIF | DHCP | DHCP 服务器 
+
+
+| DNS | UDP | 53. | 节点管理 LIF 和数据 LIF （ NFS 、 CIFS ） | DNS | DNS 
+
+
+| NDMP | TCP | 18600 – 18699 | 节点管理 LIF | 目标服务器 | NDMP 副本 
+
+
+| SMTP | TCP | 25. | 节点管理 LIF | 邮件服务器 | SMTP 警报、可用于 AutoSupport 
+
+
+.4+| SNMP | TCP | 161. | 节点管理 LIF | 监控服务器 | 通过 SNMP 陷阱进行监控 
+
+
+| UDP | 161. | 节点管理 LIF | 监控服务器 | 通过 SNMP 陷阱进行监控 
+
+
+| TCP | 162. | 节点管理 LIF | 监控服务器 | 通过 SNMP 陷阱进行监控 
+
+
+| UDP | 162. | 节点管理 LIF | 监控服务器 | 通过 SNMP 陷阱进行监控 
+
+
+.2+| SnapMirror | TCP | 11104. | 集群间 LIF | ONTAP 集群间 LIF | 管理 SnapMirror 的集群间通信会话 
+
+
+| TCP | 11105. | 集群间 LIF | ONTAP 集群间 LIF | SnapMirror 数据传输 
+
+
+| 系统日志 | UDP | 514. | 节点管理 LIF | 系统日志服务器 | 系统日志转发消息 
+|===

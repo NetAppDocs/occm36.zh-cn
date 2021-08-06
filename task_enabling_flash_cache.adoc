@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task_enabling_flash_cache.html 
+keywords: cloud volumes ontap, aws, ec2, flash cache, read-intensive, read, random, databases, email, file services, c5d.4xlarge, c5d.9xlarge, r5d.2xlarge, compression, performance 
+summary: 某些 EC2 实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 Flash Cache 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。 
+---
+= 在 AWS 中的 Cloud Volumes ONTAP 上启用 Flash Cache
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+某些 EC2 实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 将其用作 _Flash Cache_ 。Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。
+
+
+NOTE: Cloud Volumes ONTAP 不支持在重新启动后重新恢复缓存。
+
+.步骤
+. 选择以下 EC2 实例类型之一，这些实例类型可通过高级版和 BYOL 许可证使用：
++
+** c5d.4xlarge
+** c5d.9x 大型
+** r5d.2xlarge
+
+
+. 在所有卷上禁用数据压缩。
++
+必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。您可以在从 Cloud Manager 创建卷时选择无存储效率，也可以先创建卷，然后再创建卷 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["使用命令行界面禁用数据压缩"^]。
+
+

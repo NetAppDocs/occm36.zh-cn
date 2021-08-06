@@ -1,0 +1,155 @@
+---
+sidebar: sidebar 
+permalink: reference_default_configs.html 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux,  svm, LIF, LIFs, configuration backups, attributes, autosize, security style, space guarantee, unix permissions, NTFS, UNIX, boot, root, disks, aggr0, aggr1, svm, svms, storage virtual machine, LIF failover, failover, attributes, volume attributes, boot disk, root disk 
+summary: 有关默认情况下如何配置 Cloud Manager 和 Cloud Volumes ONTAP 的详细信息可以帮助您管理系统。 
+---
+= 默认配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+有关默认情况下如何配置 Cloud Manager 和 Cloud Volumes ONTAP 的详细信息可以帮助您管理系统。
+
+
+
+== Linux 上的 Cloud Manager 的默认配置
+
+如果您需要排除 Cloud Manager 或 Linux 主机故障、可能有助于了解如何配置 Cloud Manager 。
+
+* 如果您从 NetApp Cloud Central （或直接从 AWS Marketplace 或 Azure Marketplace ）部署了 Cloud Manager ，请注意以下几点：
++
+** 在 AWS 中、 EC2 Linux 实例的用户名为 EC2-user 。
+** 对于 AWS 和 Azure ， Cloud Manager 映像的操作系统是 Red Hat Enterprise Linux 7.4 （ HVM ）。
++
+操作系统不包含 GUI 。您必须使用终端访问系统。
+
+
+
+* Cloud Manager 安装文件夹位于以下位置：
++
+/opt/application/netapp/cloudmanager
+
+* 日志文件包含在以下文件夹中：
++
+/opt/application/netapp/cloudmanager/log
+
+* 云管理器服务的名称是 OCCM 。
+* OCUM 服务依赖于 MySQL 服务。
++
+如果 MySQL 服务已关闭，则 OCCM 服务也将关闭。
+
+* 如果尚未安装下列软件包，则 Cloud Manager 会在 Linux 主机上安装这些软件包：
++
+** 7 邮政编码
+** AWSCLI
+** Java
+** Kubectl
+** MySQL
+** Tridentctl
+** wget
+
+
+
+
+
+
+== Cloud Volumes ONTAP 的默认配置
+
+了解默认情况下如何配置 Cloud Volumes ONTAP 可以帮助您设置和管理系统、尤其是在您熟悉 ONTAP 的情况下、因为 Cloud Volumes ONTAP 的默认设置不同于 ONTAP 。
+
+* Cloud Volumes ONTAP 在 AWS 和 Azure 中均以单节点系统和 HA 对的形式提供。
+* 在部署 Cloud Volumes ONTAP 时、 Cloud Manager 会创建一个数据服务 SVM 。虽然您可以从 System Manager 或 CLI 创建另一个数据服务 SVM 、但不支持使用多个数据服务 SVM 。
+* 默认情况下会创建多个网络接口：
++
+** 集群管理 LIF
+** 集群间 LIF
+** 节点管理 LIF
+** iSCSI 数据 LIF
+** CIFS 和 NFS 数据 LIF
++
+
+NOTE: 由于 EC2 要求，默认情况下，对于 Cloud Volumes ONTAP 禁用 LIF 故障转移。将 LIF 迁移到另一个端口会中断实例上 IP 地址和网络接口之间的外部映射、从而使 LIF 无法访问。
+
+
+
+* Cloud Volumes ONTAP 使用 HTTPS 将配置备份发送到 Cloud Manager 。
+* 登录到 Cloud Manager 后，可以从访问备份 https://ipaddress/occm/offboxconfig/[]
+* 与其他管理工具（例如 System Manager 或 CLI ）不同、 Cloud Manager 设置了几个卷属性。
++
+下表列出了 Cloud Manager 设置的与默认设置不同的卷属性：
+
++
+[cols="15,85"]
+|===
+| 属性 | 由 Cloud Manager 设置的价值 
+
+
+| 自动调整模式 | 增长 
+
+
+| 最大自动大小  a| 
+1,000 ％
+
+
+NOTE: 云管理器管理员可以从“设置”页面修改此值。
+
+
+
+| 安全风格 | 适用于 CIFS 卷的 NTFS UNIX （用于 NFS 卷） 
+
+
+| 空间保证风格 | 无 
+
+
+| UNIX 权限（仅限 NFS ） | 777. 
+|===
++
+有关这些属性的信息，请参见 _volume crese_ 手册页。
+
+
+
+
+
+== 适用于 Cloud Volumes ONTAP 的引导和根数据
+
+除了用户数据存储之外、 Cloud Manager 还在每个 Cloud Volumes ONTAP 系统上购买用于引导和根数据的云存储。
+
+
+
+=== AWS
+
+* 用于 Cloud Volumes ONTAP 启动数据的一个配置的 IOPS SSD 磁盘、大约为 45 GB 和 1,250 PIOps
+* 一个通用 SSD 磁盘用于 Cloud Volumes ONTAP 根数据、大约为 140 GB
+* 每个引导磁盘和根磁盘一个 EBS 快照
+
+
+在 HA 对中、两个 Cloud Volumes ONTAP 节点都会将其根磁盘复制到伙伴节点。
+
+
+
+=== Azure 酒店
+
+* 一个用于 Cloud Volumes ONTAP 启动数据的高级存储 SSD 磁盘，大约为 73 GB
+* 一个用于 Cloud Volumes ONTAP 根数据的高级存储 SSD 磁盘，大约为 140 GB
+* 每个引导磁盘和根磁盘一个 Azure 快照
+
+
+
+
+=== 磁盘驻留的位置
+
+云管理器通过 AWS 和 Azure 布置存储，如下所示：
+
+* 引导数据驻留在连接到 EC2 实例或 Azure 虚拟机的磁盘上。
++
+此磁盘包含引导映像、但不能用于 Cloud Volumes ONTAP 。
+
+* 包含系统配置和日志的根数据驻留在 aggr0 中。
+* 存储虚拟机（ SVM ）根卷驻留在 aggr1 中。
+* 数据卷也驻留在 aggr1 中。
+

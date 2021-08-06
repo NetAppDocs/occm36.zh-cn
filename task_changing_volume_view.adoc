@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: task_changing_volume_view.html 
+keywords: volume view, changing, selecting, switching, views 
+summary: 您可以切换到 Cloud Manager 卷视图，通过该视图，您无需管理 Cloud Volumes ONTAP 存储系统即可在 AWS 中创建卷。 
+---
+= 更改为卷视图
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager 提供了两种管理视图：用于跨混合云管理存储系统的存储系统视图和用于在 AWS 中创建卷的卷视图，而无需管理存储系统。您可以在这些视图之间切换，但这些实例很少发生，因为单个视图应能满足您的需求。
+
+有关卷视图的详细信息，请参见 link:concept_storage_management.html#simplified-storage-management-using-the-volume-view["使用卷视图简化存储管理"]。
+
+.步骤
+. 在 Cloud Manager 控制台右上角，单击菜单，然后单击 * 查看选择 * 。
+. 在视图选择页面上，选择 * 存储系统视图 * ，然后单击 * 切换 * 。
+
+
+Cloud Manager 将切换到卷视图。

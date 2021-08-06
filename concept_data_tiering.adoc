@@ -1,0 +1,128 @@
+---
+sidebar: sidebar 
+permalink: concept_data_tiering.html 
+keywords: storage tiering, tier, tiering, data tiering, s3, s3 tiering, capacity, performance, s3 endpoint, fabric pool, fabricpool, s3 bucket, requirement, vpc endpoint, policy, policies, tiering policies, auto, snapshot only, backup, none, cooling period, volume tiering policies, blob, standard, infrequent access, hot, cool, tiering level, storage tier, storage class 
+summary: 您可以通过将冷数据自动分层到低成本对象存储来降低存储成本。 
+---
+= 数据分层概述
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以通过将非活动数据自动分层到低成本对象存储来降低存储成本。活动数据仍保留在高性能 SSD 或 HDD （性能层）中、而非活动数据则分层到低成本对象存储（容量层）。这使您可以回收主存储上的空间并缩减二级存储。
+
+Cloud Volumes ONTAP 支持在 AWS 和 Microsoft Azure 中进行数据分层。数据分层由 FabricPool 技术提供支持。
+
+
+NOTE: 您无需安装功能许可证即可启用数据分层。
+
+
+
+== 数据分层在 AWS 中的工作原理
+
+在 AWS 中启用数据分层时， Cloud Volumes ONTAP 会将 EBS 用作热数据的性能层，而将 AWS S3 用作非活动数据的容量层。
+
+image:diagram_storage_tiering.png["这是一个概念图像，显示了流向 EBS 存储的热数据以及流向 S3 存储的非活动数据。"]
+
+
+
+=== AWS 中的性能层
+
+性能层可以是通用 SSD 、配置的 IOPS SSD 或吞吐量优化的 HDD 。
+
+
+
+=== AWS 中的容量层
+
+默认情况下， Cloud Volumes ONTAP 会将非活动数据分层到 S3 _Standard_ 存储类。Standard 是存储在多个可用性区域中的频繁访问数据的理想选择。
+
+如果您不打算访问非活动数据，则可以在部署 Cloud Volumes ONTAP 后通过将系统的分层级别更改为以下级别之一来降低存储成本：
+
+智能分层:: 随着数据访问模式的变化，通过在两层之间移动数据来优化存储成本。一个层用于频繁访问，另一层用于不频繁访问。
+一个 ZONE 不常访问:: 用于存储在单个可用性区域中的不常访问的数据。
+标准—不经常访问:: 用于存储在多个可用性区域中的不常访问的数据。
+
+
+如果您确实访问了数据、访问成本会更高、因此在更改分层级别之前必须考虑到这一点。有关 S3 存储类的详细信息，请参见 https://aws.amazon.com/s3/storage-classes["AWS 文档"^]。
+
+更改分层级别后，如果 30 天后未访问非活动数据，则非活动数据将从标准存储类开始，并移至选定的存储类。有关更改分层级别的详细信息，请参见 link:task_tiering.html["将非活动数据分层到低成本对象存储"]。
+
+分层级别在系统范围内—不是每个卷。
+
+
+NOTE: Cloud Volumes ONTAP 工作环境将 S3 数据桶用于系统中的所有分层数据。每个卷不使用不同的 S3 桶。这包括 HA 工作环境。Cloud Manager 会创建一个 S3 存储分段，并将其命名为 fabric-pool-_cluster unique identifier_ 。
+
+
+
+== 数据分层在 Microsoft Azure 中的工作原理
+
+在 Azure 中启用数据分层后， Cloud Volumes ONTAP 会将 Azure 托管磁盘用作热数据的性能层，并将 Azure Blob 存储用作非活动数据的容量层。
+
+image:diagram_storage_tiering_azure.png["这是一个概念映像，显示热数据流向 Azure 受管磁盘，非活动数据流向 Azure Blob 存储。"]
+
+
+
+=== Azure 中的性能层
+
+性能层可以是高级存储（ SSD ）或标准存储（ HDD ）。
+
+
+
+=== Azure 中的容量层
+
+默认情况下， Cloud Volumes ONTAP 会将非活动数据分层到 Azure _hot_ 存储层，这是经常访问的数据的理想选择。
+
+如果您不打算访问非活动数据，则可以在部署 Cloud Volumes ONTAP 后通过将系统的分层级别更改为 Azure _cool_ 存储层来降低存储成本。Cool Tier 是存放在该层中至少 30 天的不常访问数据的理想选择。
+
+如果您确实访问了数据、访问成本会更高、因此在更改分层级别之前必须考虑到这一点。有关 Azure Blob 存储层的详细信息，请参见 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Azure 文档"^]。
+
+更改分层级别后，如果 30 天后未访问非活动数据，则非活动数据将从热存储层开始，并移至冷存储层。有关更改分层级别的详细信息，请参见 link:task_tiering.html["将非活动数据分层到低成本对象存储"]。
+
+分层级别在系统范围内—不是每个卷。
+
+
+NOTE: Cloud Volumes ONTAP 工作环境将 Azure Blob 容器用于系统中的所有分层数据。每个卷不使用不同的容器。Cloud Manager 为每个 Cloud Volumes ONTAP 系统创建一个新的存储帐户和一个容器。存储帐户的名称是随机的。
+
+
+
+== 数据分层如何影响容量限制
+
+如果启用数据分层，系统的容量限制将保持不变。此限制分布在性能层和容量层中。
+
+
+
+== 卷分层策略
+
+要启用数据分层、您必须在创建、修改或复制卷时选择卷分层策略。您可以为每个卷选择不同的策略。
+
+某些分层策略具有相关的最小冷却周期、这将设置卷中的用户数据必须保持非活动状态的时间、以便将数据视为“冷”并移动到容量层。
+
+Cloud Volumes ONTAP 支持以下分层策略：
+
+仅快照::
++
+--
+如果已读取、则容量层上的冷数据块会变得很热并移动到性能层。
+
+--
+自动::
++
+--
+从 Cloud Volumes ONTAP 9.4 开始支持此策略。
+
+如果通过随机读取进行读取、则容量层中的冷数据块会变得很热并移动到性能层。如果按顺序读取（例如与索引和防病毒扫描关联的读取）进行读取、冷数据块将保持冷态并且不会移动到性能层。
+
+--
+备份:: 复制卷以进行灾难恢复或长期保留时，目标卷的数据将从容量层开始。如果激活目标卷、则数据将在读取时逐渐移动到性能层。
+无:: 将卷的数据保留在性能层中、防止将其移动到容量层。
+
+
+
+
+== 设置数据分层
+
+有关说明以及支持的配置列表，请参见 link:task_tiering.html["将非活动数据分层到低成本对象存储"]。
