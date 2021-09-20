@@ -47,14 +47,10 @@ summary: 最常见的 Cloud Manager 部署方式是从 Cloud Central 或云提�
 * 示例 *
 
 +
-....
-chmod +x OnCommandCloudManager-V3.6.3.sh
-....
+ chmod +x OnCommandCloudManager-V3.6.3.sh
 . 运行安装脚本：
 +
-....
-./OnCommandCloudManager-V3.6.3.sh [silent] [proxy=ipaddress] [proxyport=port] [proxyuser=user_name] [proxypwd=password]
-....
+ ./OnCommandCloudManager-V3.6.3.sh [silent] [proxy=ipaddress] [proxyport=port] [proxyuser=user_name] [proxypwd=password]
 +
 _silent_ 运行安装时不提示您提供信息。
 
