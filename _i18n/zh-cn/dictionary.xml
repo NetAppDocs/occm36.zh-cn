@@ -1407,7 +1407,6 @@
   <block id="27bf96ea2dd4c98f397498424680c167" category="list-text">键入工作环境的名称，然后单击 * 删除 * 。</block>
   <block id="7d73be13421466d5cf5d832329f74c79" category="paragraph">删除工作环境最多可能需要 5 分钟。</block>
   <block id="2312fc1b07dc845a6993585c826d6ace" category="summary">OnCommand Cloud Manager 通常每月都会推出一个新版本、为您带来新功能、增强功能和错误修复。</block>
-  <block id="05446b298be754e58d1dca73d1254981" category="doc">Cloud Manager 3.6 中的新增功能</block>
   <block id="d82f7659524336d21b67ae8a490bd7a1" category="inline-link-macro">3.5 中的新增功能</block>
   <block id="e77df3191fc04494911ab761c6b0465b" category="inline-link-macro">3.4 中的新增功能</block>
   <block id="caeba3773c55f98d887e37808293db8d" category="admonition">正在查找先前版本？<block ref="1e25133c32e530307c1590f8a1ba034b" category="inline-link-macro-rx"></block>
@@ -3194,4 +3193,5 @@
   <block id="75396e001838965f1f26327de3cf6d73" category="sidebar">支持的 Cloud Volumes ONTAP 配置</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="sidebar">权限</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">早期版本</block>
+  <block id="acc81ea7928b1749431e8b47599e424c" category="doc">Cloud Manager 3.6 中的新增功能</block>
 </blocks>
