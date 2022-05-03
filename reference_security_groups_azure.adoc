@@ -6,6 +6,7 @@ summary: Cloud Manager 创建了 Azure 安全组、其中包括 Cloud Manager �
 ---
 = Azure 的安全组规则
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

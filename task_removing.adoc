@@ -6,6 +6,7 @@ summary: Cloud Manager 管理员可以删除 Cloud Volumes ONTAP 工作环境、
 ---
 = 删除 Cloud Volumes ONTAP 工作环境
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 有关默认情况下如何配置 Cloud Manager 和 Cloud Volumes ONTAP
 ---
 = 默认配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

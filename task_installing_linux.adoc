@@ -6,6 +6,7 @@ summary: 最常见的 Cloud Manager 部署方式是从 Cloud Central 或云提�
 ---
 = 在现有 Linux 主机上安装 Cloud Manager
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

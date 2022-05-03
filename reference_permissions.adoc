@@ -6,6 +6,7 @@ summary: Cloud Manager 需要权限才能代表您在 AWS 和 Azure 中执行操
 ---
 = Cloud Manager 的 AWS 和 Azure 权限
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 利用 Cloud Manager ，您可以备份和还原其数据库、以保�
 ---
 = 备份和还原 Cloud Manager
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 每个云管理器用户帐户都分配有一个定义权限的角色�
 ---
 = 用户角色
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

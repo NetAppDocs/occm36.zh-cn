@@ -7,6 +7,7 @@ summary: 开始之前、您可能希望更好地了解部署 OnCommand Cloud Man
 = 部署概述
 :toc: macro
 :hardbreaks:
+:allow-uri-read: 
 :toc: 
 :nofooter: 
 :icons: font
@@ -75,7 +76,7 @@ summary: 开始之前、您可能希望更好地了解部署 OnCommand Cloud Man
 
 在启动并运行 Cloud Manager 后、您可以在 AWS 和 Microsoft Azure 中开始部署 Cloud Volumes ONTAP 。
 
-link:task_getting_started_aws.html["AWS 入门"] 和  提供有关快速启动和运行 Cloud Volumes ONTAP 的说明。有关其他帮助信息，请参阅以下内容：
+link:task_getting_started_aws.html["AWS 入门"] 和 link:task_getting_started_azure.html["Azure 入门"] 提供有关快速启动和运行 Cloud Volumes ONTAP 的说明。有关其他帮助信息，请参阅以下内容：
 
 * https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["支持的 Cloud Volumes ONTAP 9.5 配置"^]
 * link:task_planning_your_config.html["规划配置"]

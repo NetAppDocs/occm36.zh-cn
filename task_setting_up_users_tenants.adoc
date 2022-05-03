@@ -6,6 +6,7 @@ summary: 您可以通过 Cloud Manager 向 Cloud Manager 添加其他 Cloud Cent
 ---
 = 设置用户和租户
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

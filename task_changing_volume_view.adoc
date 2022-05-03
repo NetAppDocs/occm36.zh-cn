@@ -6,6 +6,7 @@ summary: 您可以切换到 Cloud Manager 卷视图，通过该视图，您无�
 ---
 = 更改为卷视图
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

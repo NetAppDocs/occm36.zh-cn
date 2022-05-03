@@ -6,6 +6,7 @@ summary: 您可以通过克隆 NFS 卷、管理数据访问、更改底层磁盘
 ---
 = 管理 NFS 卷
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

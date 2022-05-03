@@ -6,6 +6,7 @@ summary: 某些 EC2 实例类型包括本地 NVMe 存储， Cloud Volumes ONTAP 
 ---
 = 在 AWS 中的 Cloud Volumes ONTAP 上启用 Flash Cache
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

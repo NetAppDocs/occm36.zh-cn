@@ -6,6 +6,7 @@ summary: 您可以在单系统配置中启动 Cloud Volumes ONTAP 实例，也�
 ---
 = 在 AWS 中启动 Cloud Volumes ONTAP
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -173,7 +174,7 @@ image:screenshot_cot_vol.gif["屏幕截图：显示为 Cloud Volumes ONTAP 实�
 |===
 . 在 " 使用情况配置文件 " 、 " 磁盘类型 " 和 " 分层策略 " 页上，选择是否要启用存储效率功能并编辑 S3 分层策略（如果需要）。
 +
-有关详细信息，请参见 link:task_planning_your_config.html#choosing-a-volume-usage-profile["了解卷使用情况配置文件"] 和 。
+有关详细信息，请参见 link:task_planning_your_config.html#choosing-a-volume-usage-profile["了解卷使用情况配置文件"] 和 link:concept_data_tiering.html["数据分层概述"]。
 
 . 在“审核与批准”页面上、查看并确认您的选择：
 +
@@ -367,7 +368,7 @@ image:screenshot_cot_vol.gif["屏幕截图：显示为 Cloud Volumes ONTAP 实�
 |===
 . 在 " 使用情况配置文件 " 、 " 磁盘类型 " 和 " 分层策略 " 页上，选择是否要启用存储效率功能并编辑 S3 分层策略（如果需要）。
 +
-有关详细信息，请参见 link:task_planning_your_config.html#choosing-a-volume-usage-profile["了解卷使用情况配置文件"] 和 。
+有关详细信息，请参见 link:task_planning_your_config.html#choosing-a-volume-usage-profile["了解卷使用情况配置文件"] 和 link:concept_data_tiering.html["数据分层概述"]。
 
 . 在“审核与批准”页面上、查看并确认您的选择：
 +

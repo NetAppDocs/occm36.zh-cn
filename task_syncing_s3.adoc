@@ -6,6 +6,7 @@ summary: 通过将工作环境与 NetApp Cloud Sync 相集成，您可以将 Dat
 ---
 = 将数据同步到 AWS S3
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

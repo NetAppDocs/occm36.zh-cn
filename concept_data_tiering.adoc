@@ -6,6 +6,7 @@ summary: 您可以通过将冷数据自动分层到低成本对象存储来降�
 ---
 = 数据分层概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -103,13 +104,13 @@ NOTE: Cloud Volumes ONTAP 工作环境将 Azure Blob 容器用于系统中的所
 
 Cloud Volumes ONTAP 支持以下分层策略：
 
-仅快照::
+仅快照:: 在聚合达到 50% 容量后、 Cloud Volumes ONTAP 将不与活动文件系统关联的 Snapshot 副本的冷用户数据分层到容量层。冷却时间约为 2 天。
 +
 --
 如果已读取、则容量层上的冷数据块会变得很热并移动到性能层。
 
 --
-自动::
+自动:: 在聚合达到 50% 容量后、 Cloud Volumes ONTAP 会将卷中的冷数据块分层到容量层。冷数据不仅包括 Snapshot 副本、还包括来自活动文件系统的冷用户数据。冷却期约为 31 天。
 +
 --
 从 Cloud Volumes ONTAP 9.4 开始支持此策略。

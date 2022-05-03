@@ -6,6 +6,7 @@ summary: OnCommand Cloud Manager 通常每月都会推出一个新版本、为�
 ---
 = Cloud Manager 3.6 中的新增功能
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -17,7 +18,7 @@ OnCommand Cloud Manager 通常每月都会推出一个新版本、为您带来�
 
 
 TIP: 正在查找先前版本？link:https://docs.netapp.com/us-en/occm35/reference_new_occm.html["3.5 中的新增功能"^]
-
+link:https://docs.netapp.com/us-en/occm34/reference_new_occm.html["3.4 中的新增功能"^]
 
 
 
@@ -298,7 +299,7 @@ https://cloud.netapp.com/cloud-volumes-global-regions["请参见支持的区域�
 
 与先前版本一样，您也可以使用标准 - 不常访问层和一个区域 - 不常访问层。
 
-link:concept_data_tiering.html["了解有关数据分层的更多信息。"] 和 。
+link:concept_data_tiering.html["了解有关数据分层的更多信息。"] 和 link:task_tiering.html#changing-the-tiering-level["了解如何更改存储类"]。
 
 
 

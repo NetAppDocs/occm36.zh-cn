@@ -6,6 +6,7 @@ summary: 如果您没有运行最新版本，则可以获得以前版本的 Clou
 ---
 = 早期版本的 Cloud Manager 文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

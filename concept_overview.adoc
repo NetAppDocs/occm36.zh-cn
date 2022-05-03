@@ -6,6 +6,7 @@ summary: OnCommand Cloud Manager 使您可以部署 Cloud Volumes ONTAP 、该�
 ---
 = Cloud Manager 和 Cloud Volumes ONTAP 概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

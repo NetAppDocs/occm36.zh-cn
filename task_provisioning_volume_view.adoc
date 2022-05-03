@@ -6,6 +6,7 @@ summary: 您可以使用 Cloud Manager 创建 NFS 卷、在 AWS 存储之上提�
 ---
 = 创建和装入 NFS 卷
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: DevOps 团队可以使用各种工具自动设置新环境，从而将�
 ---
 = 基础架构即代码自动化示例
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

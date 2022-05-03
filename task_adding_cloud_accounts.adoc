@@ -6,6 +6,7 @@ summary: 如果要在不同云帐户中部署 Cloud Volumes ONTAP ，则需要�
 ---
 = 将云提供商帐户添加到 Cloud Manager
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

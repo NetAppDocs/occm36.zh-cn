@@ -6,6 +6,7 @@ summary: 您可以通过启用和禁用通知报告在 Cloud Manager 中修改�
 ---
 = 编辑用户帐户
 :hardbreaks:
+:allow-uri-read: 
 :backend-html5-doctype-book: 
 :basebackend-html-doctype-book: 
 :doctype-book: 

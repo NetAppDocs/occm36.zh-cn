@@ -6,6 +6,7 @@ summary: 您必须设置网络、以便 Cloud Manager 可以在 AWS 或 Microsof
 ---
 = 云管理器的网络要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -34,7 +35,7 @@ Cloud Manager 需要通过出站 Internet 访问来部署和管理 Cloud Volumes
 
 以下各节将标识特定的端点。
 
-出站 Internet 访问以管理 AWS 中的 Cloud Volumes ONTAP::
+出站 Internet 访问以管理 AWS 中的 Cloud Volumes ONTAP:: 在 AWS 中部署和管理 Cloud Volumes ONTAP 时、 Cloud Manager 需要通过出站 Internet 访问与以下端点联系：
 +
 --
 [cols="43,57"]
@@ -95,7 +96,7 @@ AWS 服务（ AmazonAWS.com ）：
 | 在升级过程中、 Cloud Manager 会下载最新的软件包以满足第三方依赖性。 
 |===
 --
-通过出站 Internet 访问来管理 Azure 中的 Cloud Volumes ONTAP::
+通过出站 Internet 访问来管理 Azure 中的 Cloud Volumes ONTAP:: 在 Microsoft Azure 中部署和管理 Cloud Volumes ONTAP 时， Cloud Manager 需要通过出站 Internet 访问与以下端点联系：
 +
 --
 [cols="43,57"]
@@ -148,7 +149,7 @@ AWS 服务（ AmazonAWS.com ）：
 | 在升级过程中、 Cloud Manager 会下载最新的软件包以满足第三方依赖性。 
 |===
 --
-从 Web 浏览器进行出站 Internet 访问::
+从 Web 浏览器进行出站 Internet 访问:: 用户必须从 Web 浏览器访问 Cloud Manager 。运行 Web 浏览器的计算机必须连接到以下端点：
 +
 --
 [cols="43,57"]
@@ -175,7 +176,7 @@ AWS 服务（ AmazonAWS.com ）：
 | https://widget.intercom.io | 用于与 NetApp 云专家交流的产品内聊天。 
 |===
 --
-出站 Internet 访问以在 Linux 主机上安装 Cloud Manager::
+出站 Internet 访问以在 Linux 主机上安装 Cloud Manager:: 在安装过程中， Cloud Manager 安装程序必须访问以下 URL ：
 +
 --
 * http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm

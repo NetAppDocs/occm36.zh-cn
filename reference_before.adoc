@@ -6,6 +6,7 @@ summary: 在使用 Cloud Manager 创建和管理 Cloud Volumes ONTAP 系统之�
 ---
 = 在创建 Cloud Volumes ONTAP 系统之前
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -15,7 +16,7 @@ summary: 在使用 Cloud Manager 创建和管理 Cloud Volumes ONTAP 系统之�
 [role="lead"]
 在使用 Cloud Manager 创建和管理 Cloud Volumes ONTAP 系统之前、您的云管理器管理员应已准备好网络并安装和设置了 Cloud Manager 。
 
-管理员应按照说明启动并运行 link:task_getting_started_aws.html["在 AWS 中"] 或 和（可选） 。
+管理员应按照说明启动并运行 link:task_getting_started_aws.html["在 AWS 中"] 或 link:task_getting_started_azure.html["在 Azure 中"]和（可选） link:task_adding_cloud_accounts.html["设置 Cloud Manager"]。
 
 在开始部署 Cloud Volumes ONTAP 之前应存在以下条件：
 

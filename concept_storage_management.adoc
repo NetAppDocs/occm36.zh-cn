@@ -6,6 +6,7 @@ summary: Cloud Manager 通过购买为 Cloud Volumes ONTAP 配置卷所需的 AW
 ---
 = 存储管理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
