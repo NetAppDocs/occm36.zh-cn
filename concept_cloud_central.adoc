@@ -22,4 +22,4 @@ Cloud Manager 与 NetApp Cloud Central 的集成提供了多种优势、包括�
 
 以下视频概述了 NetApp Cloud Central ：
 
-video::xKRsIfiy-54[youtube, width=848,height=480]
+video::xKRsIfiy-54[youtube,width=848,height=480]

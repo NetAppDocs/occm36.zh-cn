@@ -58,7 +58,7 @@ NOTE: 与 S3 同步功能仅适用于云管理器管理员和租户管理员。
 
 如果要直接从 Cloud Manager 将卷同步到 AWS S3 ，则必须将工作环境与 Cloud Sync 服务集成。
 
-video::3hOtLs70_xE[youtube, width=848,height=480]
+video::3hOtLs70_xE[youtube,width=848,height=480]
 .步骤
 . 打开一个工作环境，然后单击 * 同步到 S3* 。
 . 单击 * 同步 * ，然后按照提示将数据同步到 S3 。
