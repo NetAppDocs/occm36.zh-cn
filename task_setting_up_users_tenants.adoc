@@ -32,6 +32,7 @@ summary: 您可以通过 Cloud Manager 向 Cloud Manager 添加其他 Cloud Cent
 . 输入与用户帐户关联的电子邮件地址，选择一个角色，然后单击 * 添加 * 。
 
 
+.下一步是什么？
 通知用户他们现在可以登录到 Cloud Manager 系统。
 
 
@@ -49,4 +50,5 @@ image:screenshot_tenants_icon.gif["屏幕截图：显示租户图标（推针）
 . 单击 * 保存 * 。
 
 
+.下一步是什么？
 现在，您可以切换到此新租户，并将租户管理员和工作环境管理员添加到此租户。

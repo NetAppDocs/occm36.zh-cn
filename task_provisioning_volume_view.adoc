@@ -109,6 +109,7 @@ image:screenshot_volume_view_ha_network.gif["屏幕截图：显示两个 Cloud V
 
 
 
+.结果
 Cloud Manager 可在现有系统或新系统上创建卷。如果需要新系统、则创建卷大约需要 25 分钟。
 
 

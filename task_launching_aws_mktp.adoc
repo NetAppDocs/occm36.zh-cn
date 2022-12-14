@@ -19,6 +19,7 @@ summary: 最好使用 NetApp Cloud Central 在 AWS 中启动 Cloud Manager 、�
 
 TIP: 如果您从 AWS Marketplace 启动 Cloud Manager 、 Cloud Manager 仍与 NetApp Cloud Central 集成。 link:concept_cloud_central.html["了解有关集成的更多信息。"]。
 
+.关于此任务
 以下步骤介绍了如何从 EC2 控制台启动实例，因为控制台允许您将 IAM 角色附加到 Cloud Manager 实例。使用一键式选项无法实现这一点。
 
 .步骤
@@ -46,6 +47,8 @@ https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Mana
 
 
 
+.结果
 AWS 使用指定的设置启动软件。云管理器实例和软件应在大约五分钟内运行。
 
+.完成后
 通过在 Web 浏览器中输入公用 IP 地址或私有 IP 地址登录到 Cloud Manager ，然后完成安装向导。

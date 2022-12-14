@@ -44,4 +44,5 @@ image:screenshot_backup.gif["屏幕抓图：显示“工具”页面中的“备
 . 选择备份。
 
 
+.结果
 Cloud Manager 可从备份文件恢复数据库。

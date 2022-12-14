@@ -19,6 +19,7 @@ summary: NetApp 卷加密是一种基于软件的技术，用于一次对一个�
 [role="lead"]
 NetApp 卷加密（ NVE ）是一种基于软件的技术，用于一次对一个卷上的空闲数据进行加密。数据， Snapshot 副本和元数据已加密。数据访问由一个唯一的 XTS-AES-256 密钥提供，每个卷一个。
 
+.关于此任务
 目前， Cloud Volumes ONTAP 通过外部密钥管理服务器支持 NetApp 卷加密。不支持板载密钥管理器。
 
 您需要从 ONTAP 命令行界面设置 NetApp 卷加密。然后，您可以使用命令行界面或 System Manager 对特定卷启用加密。Cloud Manager 不支持从其用户界面及其 API 进行 NetApp 卷加密。

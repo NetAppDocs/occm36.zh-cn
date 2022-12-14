@@ -37,6 +37,7 @@ video::V2fLTyztqYQ[youtube,width=848,height=480]
 . 单击 * 创建帐户。 *
 
 
+.下一步是什么？
 现在，用户可以在创建新 Cloud Volumes ONTAP 系统和注册现有系统时选择帐户。
 
 * link:task_deploying_otc_aws.html["在 AWS 中启动 Cloud Volumes ONTAP"]

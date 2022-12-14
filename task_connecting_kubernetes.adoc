@@ -21,8 +21,9 @@ Cloud Manager 可以自动部署 https://netapp-trident.readthedocs.io/en/stable
 
 
 
-=== 验证网络连接
+=== image:number1.png["数字 1"] 验证网络连接
 
+[role="quick-margin-list"]
 . Cloud Manager 和 Kubernetes 集群之间以及从 Kubernetes 集群到 Cloud Volumes ONTAP 系统之间必须具有网络连接。
 . 安装 Trident 时， Cloud Manager 需要出站 Internet 连接才能访问以下端点：
 +
@@ -35,7 +36,7 @@ https://packages.cloud.google.com/yum \https://github.com/NetApp/trident/release
 
 
 
-=== 将 Kubernetes 配置文件上传到 Cloud Manager
+=== image:number2.png["第2个"] 将 Kubernetes 配置文件上传到 Cloud Manager
 
 [role="quick-margin-para"]
 对于每个 Kubernetes 集群， Cloud Manager 管理员需要上传一个 YAML 格式的配置文件（ kubeconfig ）。上传文件后， Cloud Manager 会验证与集群的连接，并保存 kubeconfig 文件的加密副本。
@@ -48,7 +49,7 @@ image:screenshot_kubernetes_setup.gif["SDF"]
 
 
 
-=== 将您的工作环境连接到 Kubernetes 集群
+=== image:number3.png["第3个"] 将您的工作环境连接到 Kubernetes 集群
 
 [role="quick-margin-para"]
 在工作环境中，单击 Kubernetes 图标并按照提示进行操作。您可以将不同的集群连接到不同的 Cloud Volumes ONTAP 系统，将多个集群连接到同一个 Cloud Volumes ONTAP 系统。
@@ -61,11 +62,12 @@ image:screenshot_kubernetes_connect.gif["SDF"]
 
 
 
-=== 开始配置永久性卷
+=== image:number4.png["第4个"] 开始配置永久性卷
 
 [role="quick-margin-para"]
 使用原生 Kubernetes 接口和构造请求和管理永久性卷。Cloud Manager 会创建两个 Kubernetes 存储类，您可以在配置永久性卷时使用这些存储类：
 
+[role="quick-margin-list"]
 * * NetApp 文件 * ：用于将永久性卷绑定到单节点 Cloud Volumes ONTAP 系统
 * * netapp-file-redundred* ：用于将永久性卷绑定到 Cloud Volumes ONTAP HA 对
 
@@ -73,6 +75,7 @@ image:screenshot_kubernetes_connect.gif["SDF"]
 [role="quick-margin-para"]
 Cloud Manager 会将 Trident 配置为默认使用以下配置选项：
 
+[role="quick-margin-list"]
 * 精简卷
 * 默认 Snapshot 策略
 * 可访问的 Snapshot 目录

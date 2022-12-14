@@ -133,6 +133,7 @@ image:screenshot_replication_tiering.gif["复制卷时显示 S3 分层选项的�
 
 启用数据分层后， Cloud Volumes ONTAP 会将非活动数据分层到 AWS 中的 S3 _Standard_ 存储类或 Azure 中的 _hot_ 存储层。部署 Cloud Volumes ONTAP 后，您可以通过更改 30 天内未访问的非活动数据的分层级别来降低存储成本。如果您确实访问了数据、访问成本会更高、因此在更改分层级别之前必须考虑到这一点。
 
+.关于此任务
 分层级别为 System Wide - 恢复不是每个卷。
 
 在 AWS 中，您可以更改分层级别，以便非活动数据在 30 天后移至以下存储类之一：
