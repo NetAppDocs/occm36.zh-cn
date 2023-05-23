@@ -14,7 +14,7 @@ summary: 通过将工作环境与 NetApp Cloud Sync 相集成，您可以将 Dat
 
 
 [role="lead"]
-您可以通过将工作环境与集成来将 ONTAP 卷中的数据同步到 AWS S3 存储分段 https://www.netapp.com/us/cloud/data-sync-saas-product-details["NetApp Cloud Sync"^]。然后，您可以将同步数据用作二级副本或使用 AWS 服务（如 EMR 和 RedShift ）进行数据处理。
+您可以通过将工作环境与集成来将 ONTAP 卷中的数据同步到 AWS S3 存储分段 https://["NetApp Cloud Sync"^]。然后，您可以将同步数据用作二级副本或使用 AWS 服务（如 EMR 和 RedShift ）进行数据处理。
 
 
 

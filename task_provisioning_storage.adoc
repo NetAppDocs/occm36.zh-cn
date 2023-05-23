@@ -177,6 +177,6 @@ IMPORTANT: 对于部署在多个 AWS 可用性区域中的 HA 对，您必须使
 . 单击 * 创建 * ，然后按照提示创建 LUN 。
 . 从主机连接到 LUN 。
 +
-有关说明，请参见 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Host Utilities 文档"^] 适用于您的操作系统。
+有关说明，请参见 http://["Host Utilities 文档"^] 适用于您的操作系统。
 
 

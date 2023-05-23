@@ -48,7 +48,7 @@ summary: 利用 Cloud Manager ，您可以管理卷、聚合和 CIFS 服务器�
 
 此过程将创建 FlexClone 卷。FlexClone 卷是一个可写的时间点副本、节省空间、因为它对元数据使用少量空间、然后仅在更改或添加数据时占用额外空间。
 
-要了解有关 FlexClone 卷的详细信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 ONTAP 9 逻辑存储管理指南》"^]。
+要了解有关 FlexClone 卷的详细信息，请参见 http://["《 ONTAP 9 逻辑存储管理指南》"^]。
 
 
 
@@ -280,7 +280,7 @@ image:screenshot_aggr_volumes.gif["屏幕抓图：显示聚合中聚合中卷的
 
 . 配置卷以进行数据访问。
 +
-有关为数据访问配置目标卷的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["《 ONTAP 9 卷灾难恢复快速指南》"^]。
+有关为数据访问配置目标卷的信息，请参见 http://["《 ONTAP 9 卷灾难恢复快速指南》"^]。
 
 . 删除原始卷。
 +
@@ -321,6 +321,6 @@ image:screenshot_aggr_capacity.gif["屏幕抓图：显示聚合信息对话框�
 . 使用 System Manager 或 CLI 将卷移动到聚合。
 . 在大多数情况下，您可以使用 System Manager 移动卷。
 +
-有关说明，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["《 ONTAP 9 卷移动快速指南》"^]。
+有关说明，请参见 http://["《 ONTAP 9 卷移动快速指南》"^]。
 
 

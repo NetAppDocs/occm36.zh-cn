@@ -39,7 +39,7 @@ Cloud Volumes ONTAP 的出站 Internet 访问:: Cloud Volumes ONTAP 要求出站
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-这些权限包含在最新版本中 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager 策略"]。
+这些权限包含在最新版本中 https://["Cloud Manager 策略"]。
 
 有关设置数据分层的详细信息，请参见 link:task_tiering.html["将冷数据分层到低成本对象存储"]。
 
@@ -47,7 +47,7 @@ Cloud Volumes ONTAP 的出站 Internet 访问:: Cloud Volumes ONTAP 要求出站
 连接到其他网络中的 ONTAP 系统:: 要在 Azure 和 ONTAP 系统中的 Cloud Volumes ONTAP 系统之间复制数据、您必须在 Azure VNet 和其他网络之间建立 VPN 连接—例如 AWS VPC 或您的公司网络。
 +
 --
-有关说明，请参见 https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal["Microsoft Azure 文档：在 Azure 门户中创建站点到站点连接"^]。
+有关说明，请参见 https://["Microsoft Azure 文档：在 Azure 门户中创建站点到站点连接"^]。
 
 --
 

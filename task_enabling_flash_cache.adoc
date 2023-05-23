@@ -29,6 +29,6 @@ NOTE: Cloud Volumes ONTAP 不支持在重新启动后重新恢复缓存。
 
 . 在所有卷上禁用数据压缩。
 +
-必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。您可以在从 Cloud Manager 创建卷时选择无存储效率，也可以先创建卷，然后再创建卷 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["使用命令行界面禁用数据压缩"^]。
+必须在所有卷上禁用数据压缩，才能利用 Flash Cache 性能改进功能。您可以在从 Cloud Manager 创建卷时选择无存储效率，也可以先创建卷，然后再创建卷 http://["使用命令行界面禁用数据压缩"^]。
 
 

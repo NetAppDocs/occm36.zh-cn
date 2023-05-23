@@ -59,7 +59,7 @@ HA 配置可保持数据的高可用性，如下所示：
 对于 iSCSI 、 Cloud Volumes ONTAP 使用多路径 I/O （ MPIO ）和非对称逻辑单元访问（ ALUA ）来管理活动优化路径和非优化路径之间的路径故障转移。
 
 
-NOTE: 有关哪些特定主机配置支持 ALUA 的信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^] 以及适用于您的主机操作系统的《 Host Utilities 安装和设置指南》。
+NOTE: 有关哪些特定主机配置支持 ALUA 的信息，请参见 http://["NetApp 互操作性表工具"^] 以及适用于您的主机操作系统的《 Host Utilities 安装和设置指南》。
 
 
 
@@ -78,7 +78,7 @@ NOTE: 有关哪些特定主机配置支持 ALUA 的信息，请参见 http://mys
 * 不支持 NFSv4 。支持 NFSv3 。
 * 某些地区不支持 HA 对。
 +
-https://cloud.netapp.com/cloud-volumes-global-regions["请参见支持的 Azure 区域列表"^]。
+https://["请参见支持的 Azure 区域列表"^]。
 
 
 

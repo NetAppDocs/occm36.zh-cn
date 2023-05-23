@@ -50,11 +50,11 @@ image:diagram_tiering.gif["显示启用分层的工作流的示意图：选择�
 
 == 在 AWS 中分层数据的要求
 
-您必须确保 Cloud Volumes ONTAP 与 S3 建立连接。提供该连接的最佳方法是创建到 S3 服务的 VPC 端点。有关说明，请参见 https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["AWS 文档：创建网关端点"^]。
+您必须确保 Cloud Volumes ONTAP 与 S3 建立连接。提供该连接的最佳方法是创建到 S3 服务的 VPC 端点。有关说明，请参见 https://["AWS 文档：创建网关端点"^]。
 
 创建 VPC 端点时，请确保选择与 Cloud Volumes ONTAP 实例对应的区域、 VPC 和路由表。您还必须修改安全组才能添加出站 HTTPS 规则、该规则允许通信到 S3 端点。否则， Cloud Volumes ONTAP 无法连接到 S3 服务。
 
-如果遇到任何问题，请参见 https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS 支持知识中心：为什么我无法使用网关 VPC 端点连接到 S3 存储分段？"^]。
+如果遇到任何问题，请参见 https://["AWS 支持知识中心：为什么我无法使用网关 VPC 端点连接到 S3 存储分段？"^]。
 
 
 
@@ -67,7 +67,7 @@ image:diagram_tiering.gif["显示启用分层的工作流的示意图：选择�
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-这些权限包含在最新版本中 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager 策略"]。
+这些权限包含在最新版本中 https://["Cloud Manager 策略"]。
 
 
 

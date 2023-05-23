@@ -39,9 +39,9 @@ summary: 最常见的 Cloud Manager 部署方式是从 Cloud Central 或云提�
 
 
 . 请查看 link:reference_cloud_mgr_reqs.html["云管理器主机要求"]。
-. 从下载软件 http://mysupport.netapp.com/NOW/cgi-bin/software["NetApp 支持站点"^]，然后将其复制到 Linux 主机。
+. 从下载软件 http://["NetApp 支持站点"^]，然后将其复制到 Linux 主机。
 +
-有关在 AWS 中将文件连接和复制到 EC2 实例的帮助，请参见 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html["AWS 文档：使用 SSH 连接到 Linux 实例"^]。
+有关在 AWS 中将文件连接和复制到 EC2 实例的帮助，请参见 http://["AWS 文档：使用 SSH 连接到 Linux 实例"^]。
 
 . 分配执行脚本的权限。
 +
@@ -81,13 +81,13 @@ _proxywd_ 是您指定的用户名的密码。
 
 . 打开 Web 浏览器并输入以下 URL ：
 +
-https://_ipaddress_:__port__[]
+https://[]
 
 +
 _ipaddress_ 可以是 localhost ，专用 IP 地址或公有 IP 地址，具体取决于 Cloud Manager 主机的配置。例如，如果云管理器位于公共云中而没有公共 IP 地址，则必须从连接到云管理器主机的主机中输入私有 IP 地址。
 
 +
-如果更改了默认 HTTP （ 80 ）或 HTTPS （ 443 ）端口，则需要 _port_ 。例如，如果 HTTPS 端口更改为 8443 ，则应输入 https://_ipaddress_:8443[]
+如果更改了默认 HTTP （ 80 ）或 HTTPS （ 443 ）端口，则需要 _port_ 。例如，如果 HTTPS 端口更改为 8443 ，则应输入 https://[]
 
 . 注册 NetApp Cloud Central 帐户或登录（如果您已经拥有）。
 . 在您注册或登录时、 Cloud Manager 会自动将您的用户帐户添加为此系统的管理员。

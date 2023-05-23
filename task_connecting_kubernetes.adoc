@@ -15,9 +15,9 @@ summary: Cloud Manager 可以在 Kubernetes 集群上自动部署 NetApp Trident
 
 
 [role="lead"]
-Cloud Manager 可以自动部署 https://netapp-trident.readthedocs.io/en/stable-v18.10/introduction.html["NetApp Trident"^] 在 Kubernetes 集群上，以便可以使用 Cloud Volumes ONTAP 作为容器的永久性存储。入门包括几个步骤。
+Cloud Manager 可以自动部署 https://["NetApp Trident"^] 在 Kubernetes 集群上，以便可以使用 Cloud Volumes ONTAP 作为容器的永久性存储。入门包括几个步骤。
 
-如果您使用部署 Kubernetes 集群 https://cloud.netapp.com/kubernetes-service["NetApp Kubernetes Service"^]， Cloud Manager 可以通过您的 NetApp Cloud Central 帐户自动发现集群。如果是这种情况，请跳过前两个步骤，从第 3 步开始。
+如果您使用部署 Kubernetes 集群 https://["NetApp Kubernetes Service"^]， Cloud Manager 可以通过您的 NetApp Cloud Central 帐户自动发现集群。如果是这种情况，请跳过前两个步骤，从第 3 步开始。
 
 
 
@@ -82,7 +82,7 @@ Cloud Manager 会将 Trident 配置为默认使用以下配置选项：
 
 
 [role="quick-margin-para"]
-https://netapp-trident.readthedocs.io/["了解有关使用适用于 Kubernetes 的 Trident 配置第一个卷的更多信息"^]
+https://["了解有关使用适用于 Kubernetes 的 Trident 配置第一个卷的更多信息"^]
 
 .什么是 trident 卷？
 ****

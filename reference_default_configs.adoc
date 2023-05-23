@@ -79,7 +79,7 @@ NOTE: 由于 EC2 要求，默认情况下，对于 Cloud Volumes ONTAP 禁用 LI
 
 
 * Cloud Volumes ONTAP 使用 HTTPS 将配置备份发送到 Cloud Manager 。
-* 登录到 Cloud Manager 后，可以从访问备份 https://ipaddress/occm/offboxconfig/[]
+* 登录到 Cloud Manager 后，可以从访问备份 https://[]
 * 与其他管理工具（例如 System Manager 或 CLI ）不同、 Cloud Manager 设置了几个卷属性。
 +
 下表列出了 Cloud Manager 设置的与默认设置不同的卷属性：

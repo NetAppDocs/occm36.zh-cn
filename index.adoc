@@ -19,7 +19,7 @@ summary: 欢迎使用 Cloud Manager 和 Cloud Volumes ONTAP 文档门户。
 == 了解新增功能
 
 * link:reference_new_occm.html["Cloud Manager 中的新增功能"]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Cloud Volumes ONTAP 中的新增功能"^]
+* https://["Cloud Volumes ONTAP 中的新增功能"^]
 
 
 
@@ -28,7 +28,7 @@ summary: 欢迎使用 Cloud Manager 和 Cloud Volumes ONTAP 文档门户。
 
 * link:task_getting_started_aws.html["在 AWS 中入门"]
 * link:task_getting_started_azure.html["在 Azure 开始"]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["查找支持的 Cloud Volumes ONTAP 配置"^]
+* https://["查找支持的 Cloud Volumes ONTAP 配置"^]
 * link:reference_networking_cloud_manager.html["查看 Cloud Manager 的详细网络要求"]
 * link:reference_networking_aws.html["查看有关 Cloud Volumes ONTAP for AWS 的详细网络要求"]
 * link:reference_networking_azure.html["查看适用于 Azure 的 Cloud Volumes ONTAP 的详细网络要求"]
@@ -47,7 +47,7 @@ summary: 欢迎使用 Cloud Manager 和 Cloud Volumes ONTAP 文档门户。
 
 == 与同行建立联系、获得帮助并查找更多信息
 
-* https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS["NetApp 社区：云数据服务"^]
-* https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP 支持"^]
+* https://["NetApp 社区：云数据服务"^]
+* https://["NetApp Cloud Volumes ONTAP 支持"^]
 * link:reference_additional_info.html["从何处获取帮助和查找更多信息"]
 

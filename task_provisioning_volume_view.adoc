@@ -57,7 +57,7 @@ summary: 您可以使用 Cloud Manager 创建 NFS 卷、在 AWS 存储之上提�
 ** 冷 HDD 磁盘用于备份或不经常访问的数据，因为性能非常低。与吞吐量优化的 HDD 磁盘一样、性能也是根据吞吐量来定义的。
 
 
-有关详细信息，请参见 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS 文档： EBS 卷类型"^]。
+有关详细信息，请参见 http://["AWS 文档： EBS 卷类型"^]。
 
 |===
 +
@@ -86,7 +86,7 @@ image:screenshot_volume_view_create.gif["屏幕抓图：显示已填写“创建
 ** 吞吐量优化的 HDD 磁盘适用于需要快速一致的吞吐量的频繁访问的工作负载。
 
 
-有关详细信息，请参见 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS 文档： EBS 卷类型"^]。
+有关详细信息，请参见 http://["AWS 文档： EBS 卷类型"^]。
 
 
 
@@ -99,7 +99,7 @@ image:screenshot_volume_view_create.gif["屏幕抓图：显示已填写“创建
 | 浮动 IP | 该区域中所有 VPC 的 IP 地址必须位于 CIDR 块之外。 
 
 
-| 路由表 | 如果有多个路由表、则选择正确的路由表非常重要。否则，某些客户端可能无法访问 HA 对。有关详细信息，请参见  http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS 文档：路由表"^]。 
+| 路由表 | 如果有多个路由表、则选择正确的路由表非常重要。否则，某些客户端可能无法访问 HA 对。有关详细信息，请参见  http://["AWS 文档：路由表"^]。 
 |===
 +
 下图显示了节点和调解器页面。每个实例都位于单独的可用性区域中。

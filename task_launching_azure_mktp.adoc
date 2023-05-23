@@ -14,7 +14,7 @@ summary: 最好使用 NetApp Cloud Central 在 Azure 中部署 Cloud Manager 、
 
 
 [role="lead"]
-最好使用在 Azure 中部署 Cloud Manager https://cloud.netapp.com["NetApp Cloud Central"^]，但如果需要，您可以从 Azure Marketplace 进行部署。
+最好使用在 Azure 中部署 Cloud Manager https://["NetApp Cloud Central"^]，但如果需要，您可以从 Azure Marketplace 进行部署。
 
 有关在中部署 Cloud Manager 的说明，请参见 link:task_installing_azure_gov.html["Azure 美国政府区域"] 和中的 link:task_installing_azure_germany.html["Azure 德国地区"]。
 
@@ -28,7 +28,7 @@ TIP: 如果您从 Azure Marketplace 部署 Cloud Manager 、 Cloud Manager 仍�
 您需要安装和设置 Cloud Manager 、以便使用它在 Azure 中启动 Cloud Volumes ONTAP 。
 
 .步骤
-. https://azure.microsoft.com/en-us/marketplace/partners/netapp/netapp-oncommand-cloud-manager/["转至 Azure Marketplace 页面的 Cloud Manager 。"^]。
+. https://["转至 Azure Marketplace 页面的 Cloud Manager 。"^]。
 . 单击 * 立即获取 * ，然后单击 * 继续 * 。
 . 在 Azure 门户中，单击 * 创建 * ，然后按照步骤配置虚拟机。
 +
@@ -43,7 +43,7 @@ link:reference_security_groups_azure.html["详细了解 Cloud Manager 的安全�
 
 ** 在 * 管理 * 下，通过选择 * 启用 * 系统分配的托管身份 * 来为 Cloud Manager 启用。
 +
-此设置非常重要，因为托管身份允许 Cloud Manager 虚拟机在不提供任何凭据的情况下向 Azure Active Directory 标识自己。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["详细了解 Azure 资源的托管身份"^]。
+此设置非常重要，因为托管身份允许 Cloud Manager 虚拟机在不提供任何凭据的情况下向 Azure Active Directory 标识自己。 https://["详细了解 Azure 资源的托管身份"^]。
 
 
 
@@ -53,7 +53,7 @@ Azure 使用指定的设置部署虚拟机。虚拟机和云管理器软件应�
 
 . 从连接到云管理器虚拟机的主机上打开 Web 浏览器，然后输入以下 URL ：
 +
-http://_ipaddress_:80[]
+http://[]
 
 +
 登录时、 Cloud Manager 会自动将您的用户帐户添加为此系统的管理员。
@@ -68,12 +68,12 @@ http://_ipaddress_:80[]
 
 == 向 Cloud Manager 授予 Azure 权限
 
-在 Azure 中部署 Cloud Manager 时，您应已启用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["系统分配的受管身份"^]。现在，您必须通过创建自定义角色、然后为一个或多个订阅将角色分配给 Cloud Manager 虚拟机来授予所需的 Azure 权限。
+在 Azure 中部署 Cloud Manager 时，您应已启用 https://["系统分配的受管身份"^]。现在，您必须通过创建自定义角色、然后为一个或多个订阅将角色分配给 Cloud Manager 虚拟机来授予所需的 Azure 权限。
 
 .步骤
 . 使用云管理器策略创建自定义角色：
 +
-.. 下载 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Azure 策略"^]。
+.. 下载 https://["Cloud Manager Azure 策略"^]。
 .. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
 +
 您应该为每个 Azure 订阅添加 ID 、用户将从中创建 Cloud Volumes ONTAP 系统。
@@ -105,7 +105,7 @@ http://_ipaddress_:80[]
 *** 选择 * OnCommand 云管理器操作员 * 角色。
 +
 
-NOTE: OnCommand 云管理器操作员是中提供的默认名称 https://mysupport.netapp.com/info/web/ECMP11022837.html["Cloud Manager 策略"]。如果您为角色选择了其他名称，请选择该名称。
+NOTE: OnCommand 云管理器操作员是中提供的默认名称 https://["Cloud Manager 策略"]。如果您为角色选择了其他名称，请选择该名称。
 
 *** 分配对 * 虚拟机 * 的访问权限。
 *** 选择创建云管理器虚拟机的订阅。

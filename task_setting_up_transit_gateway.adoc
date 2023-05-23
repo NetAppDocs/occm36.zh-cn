@@ -29,7 +29,7 @@ image:diagram_transit_gateway.png["一个图显示了一个 VPC 中的 HA 配置
 以下步骤说明了如何设置类似的配置。
 
 .步骤
-. https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html["创建传输网关并将 vPC 连接到该网关"^]。
+. https://["创建传输网关并将 vPC 连接到该网关"^]。
 . 通过指定 HA 对的浮动 IP 地址，在传输网关的路由表中创建路由。
 +
 您可以在 Cloud Manager 的 " 工作环境信息 " 页面上找到浮动 IP 地址。以下是一个示例：

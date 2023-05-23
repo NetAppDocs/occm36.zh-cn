@@ -35,15 +35,15 @@ summary: 如果要在不同云帐户中部署 Cloud Volumes ONTAP ，则需要�
 如果要为 IAM 用户提供 Cloud Manager 的 AWS 密钥，则需要向该用户授予所需的权限。Cloud Manager IAM 策略定义了允许云管理器使用的 AWS 操作和资源。
 
 .步骤
-. 从下载 Cloud Manager IAM 策略 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager 策略页面"^]。
+. 从下载 Cloud Manager IAM 策略 https://["Cloud Manager 策略页面"^]。
 . 从 IAM 控制台，通过从 Cloud Manager IAM 策略复制和粘贴文本来创建您自己的策略。
 +
-https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AWS 文档：创建 IAM 策略"^]
+https://["AWS 文档：创建 IAM 策略"^]
 
 . 将策略附加到 IAM 角色或 IAM 用户。
 +
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS 文档：创建 IAM 角色"^]
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS 文档：添加和删除 IAM 策略"^]
+** https://["AWS 文档：创建 IAM 角色"^]
+** https://["AWS 文档：添加和删除 IAM 策略"^]
 
 
 
@@ -64,7 +64,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AW
 
 +
 ** 输入 Cloud Manager 实例所在帐户的 ID 。
-** 附加 Cloud Manager IAM 策略，该策略可从获得 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager 策略页面"^]。
+** 附加 Cloud Manager IAM 策略，该策略可从获得 https://["Cloud Manager 策略页面"^]。
 +
 image:screenshot_iam_create_role.gif["屏幕截图显示了 AWS IAM 控制台中的创建角色页面。在 Select type of trusted entity 下，将选择另一个 AWS 帐户。"]
 
@@ -151,7 +151,7 @@ NOTE: 以下步骤使用新的 Azure 门户。如果遇到任何问题、您应�
 要为 Cloud Manager 提供在 Azure 中启动和管理 Cloud Volumes ONTAP 所需的权限、需要一个自定义角色。
 
 .步骤
-. 下载 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Azure 策略"^]。
+. 下载 https://["Cloud Manager Azure 策略"^]。
 . 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
 +
 您应该为每个 Azure 订阅添加 ID 、用户将从中创建 Cloud Volumes ONTAP 系统。
@@ -186,7 +186,7 @@ NOTE: 以下步骤使用新的 Azure 门户。如果遇到任何问题、您应�
 必须创建 Active Directory 服务主体、以便 Cloud Manager 可以使用 Azure Active Directory 进行身份验证。
 
 .开始之前
-您必须在 Azure 中具有相应的权限才能创建 Active Directory 应用程序并将应用程序分配给角色。有关详细信息，请参见 https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/["Microsoft Azure 文档：使用门户创建可访问资源的 Active Directory 应用程序和服务主体"^]。
+您必须在 Azure 中具有相应的权限才能创建 Active Directory 应用程序并将应用程序分配给角色。有关详细信息，请参见 https://["Microsoft Azure 文档：使用门户创建可访问资源的 Active Directory 应用程序和服务主体"^]。
 
 .步骤
 . 从 Azure 门户中，打开 * Azure Active Directory* 服务。
@@ -197,7 +197,7 @@ image:screenshot_azure_ad.gif["显示了 Microsoft Azure 中的 Active Directory
 . 创建服务主体：
 +
 .. 单击 * 新建应用程序注册 * 。
-.. 输入应用程序的名称，并保持选中 * 万维网应用程序 /APi* ，然后输入任何 URL ，例如 http://url[]
+.. 输入应用程序的名称，并保持选中 * 万维网应用程序 /APi* ，然后输入任何 URL ，例如 http://[]
 .. 单击 * 创建 * 。
 
 
@@ -292,7 +292,7 @@ image:screenshot_accounts_switch_azure.gif["单击详细信息和 amp ；凭据�
 
 == 将其他 Azure 订阅与受管身份关联
 
-通过 Cloud Manager ，您可以选择要在其中部署 Cloud Volumes ONTAP 的 Azure 帐户和订阅。除非关联，否则您无法为托管身份配置文件选择其他 Azure 订阅 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["托管身份"^] 这些订阅。
+通过 Cloud Manager ，您可以选择要在其中部署 Cloud Volumes ONTAP 的 Azure 帐户和订阅。除非关联，否则您无法为托管身份配置文件选择其他 Azure 订阅 https://["托管身份"^] 这些订阅。
 
 .关于此任务
 初始身份为托管身份 link:concept_accounts_and_permissions.html["云提供商帐户"] 从 NetApp Cloud Central 部署 Cloud Manager 时。部署云管理器后、 Cloud Central 创建了 OnCommand Cloud Manager 操作员角色并将其分配给云管理器虚拟机。
@@ -307,7 +307,7 @@ image:screenshot_accounts_switch_azure.gif["单击详细信息和 amp ；凭据�
 *** 选择 * OnCommand 云管理器操作员 * 角色。
 +
 
-NOTE: OnCommand 云管理器操作员是中提供的默认名称 https://mysupport.netapp.com/info/web/ECMP11022837.html["Cloud Manager 策略"]。如果您为角色选择了其他名称，请选择该名称。
+NOTE: OnCommand 云管理器操作员是中提供的默认名称 https://["Cloud Manager 策略"]。如果您为角色选择了其他名称，请选择该名称。
 
 *** 分配对 * 虚拟机 * 的访问权限。
 *** 选择创建云管理器虚拟机的订阅。

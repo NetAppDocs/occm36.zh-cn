@@ -37,7 +37,7 @@ summary: 您可以通过完成几个快速步骤开始在 AWS 中使用 Cloud Vo
 === image:number2.png["第2个"] 从 AWS Marketplace 订阅 Cloud Volumes ONTAP
 
 [role="quick-margin-para"]
-订阅 https://aws.amazon.com/marketplace/search/results?page=1&searchTerms=netapp+cloud+volumes+ontap["AWS Marketplace"^] 需要接受软件条款。您只能从市场订阅。从任何位置启动 Cloud Volumes ONTAP 、但不支持 Cloud Manager 。
+订阅 https://["AWS Marketplace"^] 需要接受软件条款。您只能从市场订阅。从任何位置启动 Cloud Volumes ONTAP 、但不支持 Cloud Manager 。
 
 
 
@@ -47,7 +47,7 @@ summary: 您可以通过完成几个快速步骤开始在 AWS 中使用 Cloud Vo
 从 NetApp Cloud Central 部署 Cloud Manager 时，您需要使用具有部署实例权限的 AWS 帐户。
 
 [role="quick-margin-list"]
-. 转到 AWS IAM 控制台，然后通过复制和粘贴的内容来创建策略 https://mysupport.netapp.com/cloudontap/iampolicies["适用于 AWS 的 NetApp Cloud Central 策略"^]。
+. 转到 AWS IAM 控制台，然后通过复制和粘贴的内容来创建策略 https://["适用于 AWS 的 NetApp Cloud Central 策略"^]。
 . 将策略附加到 IAM 用户。
 
 
@@ -56,7 +56,7 @@ summary: 您可以通过完成几个快速步骤开始在 AWS 中使用 Cloud Vo
 === image:number4.png["第4个"] 从 NetApp Cloud Central 启动 Cloud Manager
 
 [role="quick-margin-para"]
-部署和管理 Cloud Volumes ONTAP 需要 Cloud Manager 软件。从启动 Cloud Manager 实例只需几分钟 https://cloud.netapp.com["Cloud Central"^]。
+部署和管理 Cloud Volumes ONTAP 需要 Cloud Manager 软件。从启动 Cloud Manager 实例只需几分钟 https://["Cloud Central"^]。
 
 
 

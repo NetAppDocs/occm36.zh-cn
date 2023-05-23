@@ -16,7 +16,7 @@ summary: 从 Azure 政府市场部署 Cloud Manager ，然后提供 Cloud Manage
 [role="lead"]
 要在美国政府区域启动和运行 Cloud Manager ，请首先从 Azure 政府市场部署 Cloud Manager 。然后，提供 Cloud Manager 部署和管理 Cloud Volumes ONTAP 系统所需的权限。
 
-有关受支持的 Azure 美国政府区域的列表，请参见 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes 全球地区"^]。
+有关受支持的 Azure 美国政府区域的列表，请参见 https://["Cloud Volumes 全球地区"^]。
 
 
 
@@ -45,7 +45,7 @@ Azure 使用指定的设置部署虚拟机。虚拟机和云管理器软件应�
 
 . 从连接到云管理器虚拟机的主机上打开 Web 浏览器，然后输入以下 URL ：
 +
-http://_ipaddress_:80[]
+http://[]
 
 +
 登录时、 Cloud Manager 会自动将您的用户帐户添加为此系统的管理员。
@@ -60,7 +60,7 @@ http://_ipaddress_:80[]
 
 == 使用托管身份向 Cloud Manager 授予 Azure 权限
 
-提供权限的最简单方法是启用 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["托管身份"^] 在 Cloud Manager 虚拟机上，然后为虚拟机分配所需权限。如果首选，另一种方法是 link:task_adding_cloud_accounts.html#granting-azure-permissions-using-a-service-principal["使用服务主体授予 Azure 权限"]。
+提供权限的最简单方法是启用 https://["托管身份"^] 在 Cloud Manager 虚拟机上，然后为虚拟机分配所需权限。如果首选，另一种方法是 link:task_adding_cloud_accounts.html#granting-azure-permissions-using-a-service-principal["使用服务主体授予 Azure 权限"]。
 
 .步骤
 . 在 Cloud Manager 虚拟机上启用托管身份：
@@ -71,7 +71,7 @@ http://_ipaddress_:80[]
 
 . 使用云管理器策略创建自定义角色：
 +
-.. 下载 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Azure 策略"^]。
+.. 下载 https://["Cloud Manager Azure 策略"^]。
 .. 通过将 Azure 订阅 ID 添加到可分配范围来修改 JSON 文件。
 +
 您应该为每个 Azure 订阅添加 ID 、用户将从中创建 Cloud Volumes ONTAP 系统。
@@ -103,7 +103,7 @@ http://_ipaddress_:80[]
 *** 选择 * OnCommand 云管理器操作员 * 角色。
 +
 
-NOTE: OnCommand 云管理器操作员是中提供的默认名称 https://mysupport.netapp.com/info/web/ECMP11022837.html["Cloud Manager 策略"]。如果您为角色选择了其他名称，请选择该名称。
+NOTE: OnCommand 云管理器操作员是中提供的默认名称 https://["Cloud Manager 策略"]。如果您为角色选择了其他名称，请选择该名称。
 
 *** 分配对 * 虚拟机 * 的访问权限。
 *** 选择创建云管理器虚拟机的订阅。

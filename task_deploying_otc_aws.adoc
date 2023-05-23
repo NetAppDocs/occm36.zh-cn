@@ -50,7 +50,7 @@ summary: 您可以在单系统配置中启动 Cloud Volumes ONTAP 实例，也�
 | 工作环境名称 | Cloud Manager 使用工作环境名称来命名 Cloud Volumes ONTAP 系统和 Amazon EC2 实例。如果您选择了预定义安全组的前缀，则它还会使用该名称作为前缀。 
 
 
-| 添加标记 | AWS 标记是 AWS 资源的元数据。Cloud Manager 将这些标记添加到 Cloud Volumes ONTAP 实例以及与该实例关联的每个 AWS 资源。在创建工作环境时，最多可以从用户界面添加四个标签，然后可以在创建工作环境后添加更多标签。请注意，在创建工作环境时， API 不会将您限制为四个标记。有关标记的信息，请参见 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS 文档：标记 Amazon EC2 资源"^]。 
+| 添加标记 | AWS 标记是 AWS 资源的元数据。Cloud Manager 将这些标记添加到 Cloud Volumes ONTAP 实例以及与该实例关联的每个 AWS 资源。在创建工作环境时，最多可以从用户界面添加四个标签，然后可以在创建工作环境后添加更多标签。请注意，在创建工作环境时， API 不会将您限制为四个标记。有关标记的信息，请参见 https://["AWS 文档：标记 Amazon EC2 资源"^]。 
 
 
 | 凭据 | 这些是 Cloud Volumes ONTAP 集群管理员帐户的凭据。您可以使用这些凭据通过 OnCommand System Manager 或其 CLI 连接到 Cloud Volumes ONTAP 。 
@@ -89,7 +89,7 @@ link:concept_security.html#encryption-of-data-at-rest["了解有关支持的加�
 
 . 在 IAM 角色页面上，您应该保留默认选项以允许 Cloud Manager 为您创建角色。
 +
-如果您希望使用自己的策略，则必须满足 http://mysupport.netapp.com/cloudontap/support/iampolicies["Cloud Volumes ONTAP 节点的策略要求"^]。
+如果您希望使用自己的策略，则必须满足 http://["Cloud Volumes ONTAP 节点的策略要求"^]。
 
 . 在许可页面上，根据需要更改 Cloud Volumes ONTAP 版本，选择许可证，实例类型，实例租户，然后单击 * 继续 * 。
 +
@@ -192,7 +192,7 @@ Cloud Manager 将启动 Cloud Volumes ONTAP 实例。您可以跟踪时间链中
 
 如果在启动 Cloud Volumes ONTAP 实例时遇到任何问题，请查看故障消息。您还可以选择工作环境并单击重新创建环境。
 
-要获得更多帮助，请转至 https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP 支持"^]。
+要获得更多帮助，请转至 https://["NetApp Cloud Volumes ONTAP 支持"^]。
 
 .完成后
 * 如果配置了 CIFS 共享、请授予用户或组对文件和文件夹的权限、并验证这些用户是否可以访问该共享并创建文件。
@@ -236,7 +236,7 @@ Cloud Manager 将启动 Cloud Volumes ONTAP 实例。您可以跟踪时间链中
 | 工作环境名称 | Cloud Manager 使用工作环境名称来命名 Cloud Volumes ONTAP 系统和 Amazon EC2 实例。如果您选择了预定义安全组的前缀，则它还会使用该名称作为前缀。 
 
 
-| 添加标记 | AWS 标记是 AWS 资源的元数据。Cloud Manager 将这些标记添加到 Cloud Volumes ONTAP 实例以及与该实例关联的每个 AWS 资源。有关标记的信息，请参见 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS 文档：标记 Amazon EC2 资源"^]。 
+| 添加标记 | AWS 标记是 AWS 资源的元数据。Cloud Manager 将这些标记添加到 Cloud Volumes ONTAP 实例以及与该实例关联的每个 AWS 资源。有关标记的信息，请参见 https://["AWS 文档：标记 Amazon EC2 资源"^]。 
 
 
 | 凭据 | 这些是 Cloud Volumes ONTAP 集群管理员帐户的凭据。您可以使用这些凭据通过 OnCommand System Manager 或其 CLI 连接到 Cloud Volumes ONTAP 。 
@@ -263,7 +263,7 @@ image:screenshot_cot_vpc_ha.gif["屏幕抓图：显示为 HA 配置填写的 VPC
 
 . 如果选择多个 AZs ，请选择应包含指向浮动 IP 地址的路由的路由表，然后单击 * 继续 * 。
 +
-如果有多个路由表、则选择正确的路由表非常重要。否则，某些客户端可能无法访问 Cloud Volumes ONTAP HA 对。有关路由表的详细信息，请参见 http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS 文档：路由表"^]。
+如果有多个路由表、则选择正确的路由表非常重要。否则，某些客户端可能无法访问 Cloud Volumes ONTAP HA 对。有关路由表的详细信息，请参见 http://["AWS 文档：路由表"^]。
 
 . 在“数据加密”页面上，选择“无数据加密”或“ AWS 管理的加密”。
 +
@@ -288,7 +288,7 @@ link:concept_security.html#encryption-of-data-at-rest["了解有关支持的加�
 
 . 在 IAM 角色页面上，您应该保留默认选项以允许 Cloud Manager 为您创建角色。
 +
-如果您希望使用自己的策略，则必须满足 http://mysupport.netapp.com/cloudontap/support/iampolicies["Cloud Volumes ONTAP 节点和 HA 调解器的策略要求"^]。
+如果您希望使用自己的策略，则必须满足 http://["Cloud Volumes ONTAP 节点和 HA 调解器的策略要求"^]。
 
 . 在许可页面上，根据需要更改 Cloud Volumes ONTAP 版本，选择许可证，实例类型，实例租户，然后单击 * 继续 * 。
 +
@@ -388,7 +388,7 @@ Cloud Manager 将启动 Cloud Volumes ONTAP HA 对。您可以跟踪时间链中
 
 如果在启动 HA 对时遇到任何问题、请查看故障消息。您还可以选择工作环境并单击重新创建环境。
 
-要获得更多帮助，请转至 https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP 支持"^]。
+要获得更多帮助，请转至 https://["NetApp Cloud Volumes ONTAP 支持"^]。
 
 .完成后
 * 如果配置了 CIFS 共享、请授予用户或组对文件和文件夹的权限、并验证这些用户是否可以访问该共享并创建文件。

@@ -36,7 +36,7 @@ Red Hat Enterprise Linux 系统必须在 Red Hat 订购管理中注册。如果�
 
 
 --
-虚拟机管理程序:: 经过认证可运行 CentOS 或 Red Hat Enterprise Linux 的裸机或托管虚拟机管理程序https://access.redhat.com/certified-hypervisors["Red Hat 解决方案：哪些虚拟机管理程序已通过认证，可以运行 Red Hat Enterprise Linux ？"^]
+虚拟机管理程序:: 经过认证可运行 CentOS 或 Red Hat Enterprise Linux 的裸机或托管虚拟机管理程序https://["Red Hat 解决方案：哪些虚拟机管理程序已通过认证，可以运行 Red Hat Enterprise Linux ？"^]
 CPU:: 具有两个内核的 2.27 GHz 或更高性能
 RAM:: 4 GB
 可用磁盘空间:: 50 GB

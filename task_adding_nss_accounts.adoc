@@ -20,7 +20,7 @@ summary: 要部署 BYOL 系统，需要将 NetApp 支持站点帐户添加到 Cl
 
 video::V2fLTyztqYQ[youtube,width=848,height=480]
 .步骤
-. 如果您还没有 NetApp 支持站点帐户， http://now.netapp.com/newuser/["注册一个"^]。
+. 如果您还没有 NetApp 支持站点帐户， http://["注册一个"^]。
 . 在 Cloud Manager 控制台右上角，单击任务下拉列表，然后选择 * 帐户设置 * 。
 . 单击 * 添加新帐户 * 并选择 * NetApp 支持站点 * 。
 . 指定帐户的名称，然后输入用户名和密码。
