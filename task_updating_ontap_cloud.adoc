@@ -77,7 +77,7 @@ HA 对的升级不会中断。无中断升级可同时升级 HA 对中的两个�
 
 您可以升级或降级到的 ONTAP 版本因系统上当前运行的 ONTAP 版本而异。
 
-要了解版本要求，请参见 http://["ONTAP 9 文档：集群更新要求"^]。
+要了解版本要求，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html["ONTAP 9 文档：集群更新要求"^]。
 
 
 
@@ -172,7 +172,7 @@ Cloud Manager 将启动软件升级。软件更新完成后，您可以在工作
 
 NOTE: 默认情况下，预定义的 Cloud Volumes ONTAP 安全组允许出站 HTTP 和 FTP 连接。
 
-. 从获取软件映像 https://["NetApp 支持站点"^]。
+. 从获取软件映像 https://mysupport.netapp.com/products/p/cloud_ontap.html["NetApp 支持站点"^]。
 . 将软件映像复制到 HTTP 或 FTP 服务器上的目录中、该文件将从该目录中提供服务。
 . 在 Cloud Manager 的工作环境中，单击菜单图标，然后单击 * 高级 > 更新 Cloud Volumes ONTAP * 。
 . 在更新软件页面上，选择 * 选择可从 URL* 获得的映像，输入 URL ，然后单击 * 更改映像 * 。

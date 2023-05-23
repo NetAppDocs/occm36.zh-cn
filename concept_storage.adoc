@@ -48,11 +48,11 @@ TIP: 从 AWS 或 Azure 购买的存储总量为 _raw capacity_ 。可用容量 _
 
 NOTE: HA 配置和数据分层不支持冷 HDD 磁盘。
 
-有关这些磁盘的使用情形的其他详细信息，请参见 http://["AWS 文档： EBS 卷类型"^]。
+有关这些磁盘的使用情形的其他详细信息，请参见 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS 文档： EBS 卷类型"^]。
 
 link:task_planning_your_config.html#sizing-your-system-in-aws["了解如何在 AWS 中为您的系统选择磁盘类型和磁盘大小"]。
 
-https://["查看 Cloud Volumes ONTAP 的存储限制"]。
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["查看 Cloud Volumes ONTAP 的存储限制"]。
 
 
 
@@ -78,8 +78,8 @@ https://["查看 Cloud Volumes ONTAP 的存储限制"]。
 HA 对:: HA 对使用高级页面 Blobs ，这些页面的最大磁盘大小为 8 TB 。
 
 
-有关这些磁盘的使用情形的其他详细信息，请参见 https://["Microsoft Azure 文档： Microsoft Azure 存储简介"^]。
+有关这些磁盘的使用情形的其他详细信息，请参见 https://azure.microsoft.com/documentation/articles/storage-introduction/["Microsoft Azure 文档： Microsoft Azure 存储简介"^]。
 
 link:task_planning_your_config.html#sizing-your-system-in-azure["了解如何在 Azure 中为您的系统选择磁盘类型和磁盘大小"]。
 
-https://["查看 Cloud Volumes ONTAP 的存储限制"]。
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["查看 Cloud Volumes ONTAP 的存储限制"]。

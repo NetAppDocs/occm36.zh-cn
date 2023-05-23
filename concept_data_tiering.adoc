@@ -48,7 +48,7 @@ image:diagram_storage_tiering.png["这是一个概念图像，显示了流向 EB
 标准—不经常访问:: 用于存储在多个可用性区域中的不常访问的数据。
 
 
-如果您确实访问了数据、访问成本会更高、因此在更改分层级别之前必须考虑到这一点。有关 S3 存储类的详细信息，请参见 https://["AWS 文档"^]。
+如果您确实访问了数据、访问成本会更高、因此在更改分层级别之前必须考虑到这一点。有关 S3 存储类的详细信息，请参见 https://aws.amazon.com/s3/storage-classes["AWS 文档"^]。
 
 更改分层级别后，如果 30 天后未访问非活动数据，则非活动数据将从标准存储类开始，并移至选定的存储类。有关更改分层级别的详细信息，请参见 link:task_tiering.html["将非活动数据分层到低成本对象存储"]。
 
@@ -79,7 +79,7 @@ image:diagram_storage_tiering_azure.png["这是一个概念映像，显示热数
 
 如果您不打算访问非活动数据，则可以在部署 Cloud Volumes ONTAP 后通过将系统的分层级别更改为 Azure _cool_ 存储层来降低存储成本。Cool Tier 是存放在该层中至少 30 天的不常访问数据的理想选择。
 
-如果您确实访问了数据、访问成本会更高、因此在更改分层级别之前必须考虑到这一点。有关 Azure Blob 存储层的详细信息，请参见 https://["Azure 文档"^]。
+如果您确实访问了数据、访问成本会更高、因此在更改分层级别之前必须考虑到这一点。有关 Azure Blob 存储层的详细信息，请参见 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Azure 文档"^]。
 
 更改分层级别后，如果 30 天后未访问非活动数据，则非活动数据将从热存储层开始，并移至冷存储层。有关更改分层级别的详细信息，请参见 link:task_tiering.html["将非活动数据分层到低成本对象存储"]。
 

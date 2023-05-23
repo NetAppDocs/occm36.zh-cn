@@ -32,9 +32,9 @@ Cloud Manager 会在您刷新页面时更新成本。有关最终成本详细信
 "ce:GetTags"
 ----
 +
-这些操作包含在最新的中 https://["Cloud Manager 策略"^]。从 NetApp Cloud Central 部署的新系统会自动包含这些权限。
+这些操作包含在最新的中 https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager 策略"^]。从 NetApp Cloud Central 部署的新系统会自动包含这些权限。
 
-.. https://["激活 * 工作环境 Id* 标记"^]。
+.. https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html["激活 * 工作环境 Id* 标记"^]。
 +
 为了跟踪 AWS 成本， Cloud Manager 会为 Cloud Volumes ONTAP 实例分配成本分配标记。创建首个工作环境后，激活 * 工作环境 Id* 标记。用户定义的标记不会显示在 AWS 计费报告中，除非您在计费和成本管理控制台中激活它们。
 

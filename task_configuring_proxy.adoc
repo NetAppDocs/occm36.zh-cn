@@ -23,7 +23,7 @@ summary: 首次部署 Cloud Manager 时，如果系统无法访问 Internet 、�
 
 .步骤
 . 在 Cloud Manager 控制台右上角，单击任务下拉列表，然后选择 * 设置 * 。
-. 在 HTTP 代理下，使用语法输入服务器 http://[]下，如果服务器需要基本身份验证，请指定用户名和密码，然后单击 * 保存 * 。
+. 在 HTTP 代理下，使用语法输入服务器 http://_address:port_[]下，如果服务器需要基本身份验证，请指定用户名和密码，然后单击 * 保存 * 。
 +
 
 NOTE: Cloud Manager 不支持包含 @ 字符的密码。

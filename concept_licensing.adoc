@@ -37,7 +37,7 @@ image:screenshot_warning.gif["屏幕截图：显示了包含警告图标的 Clou
 如果不及时续订许可证、 Cloud Volumes ONTAP 系统将自行关闭。如果重新启动它、它会再次自动关闭。
 
 
-NOTE: Cloud Volumes ONTAP 还可以使用 EMS （事件管理系统）事件通知通过电子邮件、 SNMP 陷阱主机或系统日志服务器通知您。有关说明，请参见 http://["《 ONTAP 9 EMS 配置快速指南》"^]。
+NOTE: Cloud Volumes ONTAP 还可以使用 EMS （事件管理系统）事件通知通过电子邮件、 SNMP 陷阱主机或系统日志服务器通知您。有关说明，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html["《 ONTAP 9 EMS 配置快速指南》"^]。
 
 [discrete]
 === 许可证续订

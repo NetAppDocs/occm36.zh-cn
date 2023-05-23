@@ -23,7 +23,7 @@ summary: 您可能需要在存储需求发生变化时更改 Cloud Volumes ONTAP
 如果 Cloud Manager 无法从 NetApp 获取 BYOL 许可证文件、您可以自己获取该文件、然后手动将该文件上载到 Cloud Manager 、以便它可以在 Cloud Volumes ONTAP 系统上安装许可证。
 
 .步骤
-. 转至 https://["NetApp 许可证文件生成器"^] 并使用您的 NetApp 支持站点凭据登录。
+. 转至 https://register.netapp.com/register/getlicensefile["NetApp 许可证文件生成器"^] 并使用您的 NetApp 支持站点凭据登录。
 . 输入密码并选择您的产品（ * 适用于 AWS* 的 NetApp Cloud Volumes ONTAP BYOL ， * 适用于 Azure* 的 NetApp Cloud Volumes ONTAP BYOL 或 * 适用于 AWS* 的 NetApp Cloud Volumes ONTAP BYOL HA ），输入序列号，确认您已阅读并接受隐私策略，然后单击 * 提交 * 。
 +
 * 示例 *

@@ -27,7 +27,7 @@ OnCommand Cloud Manager 使您可以部署 Cloud Volumes ONTAP 、该功能为�
 
 image:diagram_cloud_manager_overview.png["显示了 Cloud Manager 可在混合云中管理的组件：为 EC2 计算提供 EBS 存储的 Cloud Volumes ONTAP 系统，为虚拟机提供 Azure 存储的 Cloud Volumes ONTAP 系统以及在混合云和多云环境中进行数据复制。"]
 
-https://["了解有关 Cloud Manager 的更多信息"^]
+https://www.netapp.com/us/products/data-infrastructure-management/cloud-manager.aspx["了解有关 Cloud Manager 的更多信息"^]
 
 
 
@@ -47,6 +47,6 @@ Cloud Volumes ONTAP 通过以下关键功能将企业存储扩展到云：
 
 NOTE: Cloud Volumes ONTAP 附带了 ONTAP 功能许可证，但 NetApp 卷加密除外。
 
-https://["查看支持的 Cloud Volumes ONTAP 配置"^]
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["查看支持的 Cloud Volumes ONTAP 配置"^]
 
-https://["了解有关 Cloud Volumes ONTAP 的更多信息"^]
+https://www.netapp.com/us/cloud/ontap-cloud-native-product-details["了解有关 Cloud Volumes ONTAP 的更多信息"^]

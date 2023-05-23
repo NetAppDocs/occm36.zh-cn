@@ -84,7 +84,7 @@ HA 配置可保持数据的高可用性，如下所示：
 对于 iSCSI 、 Cloud Volumes ONTAP 使用多路径 I/O （ MPIO ）和非对称逻辑单元访问（ ALUA ）来管理活动优化路径和非优化路径之间的路径故障转移。
 
 
-NOTE: 有关哪些特定主机配置支持 ALUA 的信息，请参见 http://["NetApp 互操作性表工具"^] 以及适用于您的主机操作系统的《 Host Utilities 安装和设置指南》。
+NOTE: 有关哪些特定主机配置支持 ALUA 的信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^] 以及适用于您的主机操作系统的《 Host Utilities 安装和设置指南》。
 
 
 
@@ -107,7 +107,7 @@ image:diagram_takeover_giveback.png["在 Cloud Volumes ONTAP HA 对中显示存�
 如果运行 Cloud Volumes ONTAP 节点的实例出现故障、在单可用性区域 (AZ) 中部署 HA 配置可以确保数据的高可用性。所有数据均可从 VPC 外部本地访问。
 
 
-NOTE: Cloud Manager 将创建 https://["AWS 分布放置组"^] 并启动该放置组中的两个 HA 节点。放置组通过将实例分散在不同的底层硬件上，降低同时发生故障的风险。此功能可从计算角度而不是从磁盘故障角度提高冗余。
+NOTE: Cloud Manager 将创建 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["AWS 分布放置组"^] 并启动该放置组中的两个 HA 节点。放置组通过将实例分散在不同的底层硬件上，降低同时发生故障的风险。此功能可从计算角度而不是从磁盘故障角度提高冗余。
 
 
 
@@ -126,7 +126,7 @@ image:diagram_single_az.png["概念映像，显示单个可用性区域中的 ON
 对于 iSCSI 、 Cloud Volumes ONTAP 使用多路径 I/O （ MPIO ）和非对称逻辑单元访问（ ALUA ）来管理活动优化路径和非优化路径之间的路径故障转移。
 
 
-NOTE: 有关哪些特定主机配置支持 ALUA 的信息，请参见 http://["NetApp 互操作性表工具"^] 以及适用于您的主机操作系统的《 Host Utilities 安装和设置指南》。
+NOTE: 有关哪些特定主机配置支持 ALUA 的信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^] 以及适用于您的主机操作系统的《 Host Utilities 安装和设置指南》。
 
 对于 NAS 配置、如果发生故障、数据 IP 地址可以在 HA 节点之间迁移。这样可以确保客户端访问存储。
 

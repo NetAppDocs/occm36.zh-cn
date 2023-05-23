@@ -37,7 +37,7 @@ image:screenshot_enabling_worm.gif["显示了创建新工作环境时可用的 W
 
 您可以使用应用程序通过 NFS 或 CIFS 将文件提交到 WORM ，或者使用 ONTAP CLI 自动将文件提交到 WORM 。您还可以使用 WORM 附加文件来保留增量写入的数据，例如日志信息。
 
-在 Cloud Volumes ONTAP 系统上激活 WORM 存储后，必须使用 ONTAP CLI 对 WORM 存储进行所有管理。有关说明，请参见 http://["ONTAP 文档"^]。
+在 Cloud Volumes ONTAP 系统上激活 WORM 存储后，必须使用 ONTAP CLI 对 WORM 存储进行所有管理。有关说明，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-arch-con/home.html["ONTAP 文档"^]。
 
 
 NOTE: Cloud Volumes ONTAP 对 WORM 存储的支持等同于 SnapLock Enterprise 模式。

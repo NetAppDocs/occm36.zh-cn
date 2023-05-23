@@ -14,10 +14,10 @@ summary: 您可以从任何连接到云管理器系统的 Web 浏览器登录到
 
 
 [role="lead"]
-您可以从任何连接到云管理器系统的 Web 浏览器登录到云管理器。您应使用登录 https://["NetApp Cloud Central"^] 用户帐户
+您可以从任何连接到云管理器系统的 Web 浏览器登录到云管理器。您应使用登录 https://cloud.netapp.com["NetApp Cloud Central"^] 用户帐户
 
 .步骤
-. 打开 Web 浏览器并登录到 https://["NetApp Cloud Central"^]。
+. 打开 Web 浏览器并登录到 https://cloud.netapp.com["NetApp Cloud Central"^]。
 . 单击 * 转至云数据服务 * 并选择 * Cloud Volumes ONTAP * 。
 . 对于要访问的 Cloud Manager 系统，单击 * 转到 Cloud Manager* 。
 +

@@ -104,7 +104,7 @@ image:diagram_replication_snapvault_policy.png["此图显示了 Snapshot 策略�
 
 在复制数据之前、您应该确认是否满足了 Cloud Volumes ONTAP 系统和 ONTAP 集群的特定要求。
 
-版本要求:: 在复制数据之前，您应该验证源卷和目标卷是否运行兼容的 ONTAP 版本。有关详细信息，请参见 http://["数据保护高级指南"^]。
+版本要求:: 在复制数据之前，您应该验证源卷和目标卷是否运行兼容的 ONTAP 版本。有关详细信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-dap/home.html["数据保护高级指南"^]。
 特定于 Cloud Volumes ONTAP 的要求::
 +
 --
@@ -236,7 +236,7 @@ image:screenshot_replication_managing.gif["屏幕抓图：显示 \" 复制状态
 
 IMPORTANT: 重新同步卷时、目标卷上的内容将被源卷上的内容覆盖。
 
-要执行反向重新同步，以便将数据从目标卷重新同步到源卷，请参见 http://["《 ONTAP 9 卷灾难恢复快速指南》"^]。
+要执行反向重新同步，以便将数据从目标卷重新同步到源卷，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["《 ONTAP 9 卷灾难恢复快速指南》"^]。
 
 
 

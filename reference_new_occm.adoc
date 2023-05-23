@@ -43,7 +43,7 @@ link:media/c2s.pdf["AWS 商用云服务环境快速入门指南"^]
 
 === 支持在 AWS 中使用 6 TB 磁盘
 
-现在，您可以使用适用于 AWS 的 Cloud Volumes ONTAP 选择 6 TB 的 EBS 磁盘大小。最新版本 https://["提高通用 SSD 的性能"^]现在， 6 TB 磁盘是实现最高性能的最佳选择。
+现在，您可以使用适用于 AWS 的 Cloud Volumes ONTAP 选择 6 TB 的 EBS 磁盘大小。最新版本 https://aws.amazon.com/about-aws/whats-new/2018/12/amazon-ebs-increases-performance-of-general-purpose-ssd-gp2-volumes/["提高通用 SSD 的性能"^]现在， 6 TB 磁盘是实现最高性能的最佳选择。
 
 Cloud Volumes ONTAP 9.5 ， 9.4 和 9.3 支持此更改。
 
@@ -63,7 +63,7 @@ Cloud Volumes ONTAP 9.5 ， 9.4 和 9.3 支持此更改。
 
 Cloud Volumes ONTAP 9.5 ， 9.4 和 9.3 支持此更改。
 
-https://["了解有关标准 SSD 的更多信息"^]。
+https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-standard-ssd-disks-for-azure-virtual-machine-workloads/["了解有关标准 SSD 的更多信息"^]。
 
 
 
@@ -164,7 +164,7 @@ link:task_adding_nss_accounts.html["了解如何将 NetApp 支持站点帐户添
 
 多个 AWS 可用性区域中的 HA 对使用 _floating IP Addresses_ 进行 NAS 数据访问和管理接口。到目前为止，这些浮动 IP 地址无法从 HA 对所在的 VPC 外部进行访问。
 
-我们已验证您是否可以使用 https://["AWS 传输网关"^] 允许从 VPC 外部访问浮动 IP 地址。这意味着， VPC 外部的 NetApp 管理工具和 NAS 客户端可以访问浮动 IP 并利用自动故障转移。
+我们已验证您是否可以使用 https://aws.amazon.com/transit-gateway/["AWS 传输网关"^] 允许从 VPC 外部访问浮动 IP 地址。这意味着， VPC 外部的 NetApp 管理工具和 NAS 客户端可以访问浮动 IP 并利用自动故障转移。
 
 link:task_setting_up_transit_gateway.html["了解如何在多个 AZs 中为 HA 对设置 AWS 传输网关"]。
 
@@ -200,7 +200,7 @@ link:api.html["OnCommand Cloud Manager API 开发人员指南"^]
 
 Cloud Manager 已更新，可支持 Cloud Volumes ONTAP 9.5 P1 修补版本。在此修补版本中， Azure 中的 HA 对现已全面上市（ GA ）。
 
-请参见 https://["《 Cloud Volumes ONTAP 9.5 发行说明》"] 有关其他详细信息，包括有关 Azure 区域对 HA 对支持的重要信息。
+请参见 https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["《 Cloud Volumes ONTAP 9.5 发行说明》"] 有关其他详细信息，包括有关 Azure 区域对 HA 对支持的重要信息。
 
 
 
@@ -217,7 +217,7 @@ Cloud Manager 3.6.4 包括以下增强功能。
 
 === 使用其他帐户的密钥进行 AWS 管理的加密
 
-在 AWS 中启动 Cloud Volumes ONTAP 系统时，您现在可以启用 http://["AWS 管理的加密"^] 使用其他 AWS 用户帐户中的客户主密钥（ CMK ）。
+在 AWS 中启动 Cloud Volumes ONTAP 系统时，您现在可以启用 http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["AWS 管理的加密"^] 使用其他 AWS 用户帐户中的客户主密钥（ CMK ）。
 
 下图显示了如何在创建新的工作环境时选择选项：
 
@@ -261,7 +261,7 @@ Cloud Manager 3.6.3 包括以下增强功能。
 
 === 支持 Cloud Volumes ONTAP 9.5 GA
 
-Cloud Manager 现在支持 Cloud Volumes ONTAP 9.5 的通用版本（ GA ）。其中包括在 AWS 中支持 M5 和 R5 实例。有关 9.5 版的详细信息，请参见 https://["《 Cloud Volumes ONTAP 9.5 发行说明》"^]。
+Cloud Manager 现在支持 Cloud Volumes ONTAP 9.5 的通用版本（ GA ）。其中包括在 AWS 中支持 M5 和 R5 实例。有关 9.5 版的详细信息，请参见 https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["《 Cloud Volumes ONTAP 9.5 发行说明》"^]。
 
 
 
@@ -269,9 +269,9 @@ Cloud Manager 现在支持 Cloud Volumes ONTAP 9.5 的通用版本（ GA ）。�
 
 Cloud Volumes ONTAP 高级版和 BYOL 的系统容量限制现在在所有配置中均为 368 TB ： AWS 和 Azure 中的单节点和 HA 。这将更改适用场景 Cloud Volumes ONTAP 9.5 ， 9.4 和 9.3 （仅限 AWS 与 9.3 ）。
 
-对于某些配置，磁盘限制会阻止您单独使用磁盘来达到 368 TB 容量限制。在这些情况下，您可以通过达到 368 TB 容量限制 https://["将非活动数据分层到对象存储"^]。例如， Azure 中的单节点系统可能具有 252 TB 基于磁盘的容量，从而在 Azure Blob 存储中最多允许 116 TB 的非活动数据。
+对于某些配置，磁盘限制会阻止您单独使用磁盘来达到 368 TB 容量限制。在这些情况下，您可以通过达到 368 TB 容量限制 https://docs.netapp.com/us-en/occm/concept_data_tiering.html["将非活动数据分层到对象存储"^]。例如， Azure 中的单节点系统可能具有 252 TB 基于磁盘的容量，从而在 Azure Blob 存储中最多允许 116 TB 的非活动数据。
 
-有关磁盘限制的信息，请参阅中的存储限制 https://["《 Cloud Volumes ONTAP 发行说明》"^]。
+有关磁盘限制的信息，请参阅中的存储限制 https://docs.netapp.com/us-en/cloud-volumes-ontap/["《 Cloud Volumes ONTAP 发行说明》"^]。
 
 
 
@@ -289,7 +289,7 @@ Cloud Manager 和 Cloud Volumes ONTAP 现在在以下 AWS 地区受支持：
 
 
 
-https://["请参见支持的区域的完整列表"^]。
+https://cloud.netapp.com/cloud-volumes-global-regions["请参见支持的区域的完整列表"^]。
 
 
 
@@ -339,7 +339,7 @@ Cloud Manager 3.6.2 包括新功能和增强功能。
 
 === 在一个 AZ 中为 Cloud Volumes ONTAP HA 配置 AWS 扩展放置组
 
-在一个 AWS 可用性区域中部署 Cloud Volumes ONTAP HA 时， Cloud Manager 现在会创建 https://["AWS 分布放置组"^] 并启动该放置组中的两个 HA 节点。放置组通过将实例分散在不同的底层硬件上，降低同时发生故障的风险。
+在一个 AWS 可用性区域中部署 Cloud Volumes ONTAP HA 时， Cloud Manager 现在会创建 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["AWS 分布放置组"^] 并启动该放置组中的两个 HA 节点。放置组通过将实例分散在不同的底层硬件上，降低同时发生故障的风险。
 
 
 NOTE: 此功能可从计算角度而不是从磁盘故障角度提高冗余。
@@ -351,7 +351,7 @@ Cloud Manager 需要此功能的新权限。确保为 Cloud Manager 提供权限
 "ec2:CreatePlacementGroup",
 "ec2:DeletePlacementGroup"
 ----
-您可以在中找到所需权限的完整列表 https://["Cloud Manager 的最新 AWS 策略"^]。
+您可以在中找到所需权限的完整列表 https://s3.amazonaws.com/occm-sample-policies/Policy_for_Cloud_Manager_3.6.2.json["Cloud Manager 的最新 AWS 策略"^]。
 
 
 
@@ -417,7 +417,7 @@ Cloud Manager 3.6.1 包括新功能和增强功能。
 
 Cloud Manager 现在支持 Microsoft Azure 中的 Cloud Volumes ONTAP 9.5 版本，其中包括高可用性（ HA ）对的预览。您可以通过 ng-Cloud-Volume-ONTAP-preview@netapp.com 联系我们来申请 Azure HA 对的预览许可证。
 
-有关 9.5 版的详细信息，请参见 https://["《 Cloud Volumes ONTAP 9.5 发行说明》"^]。
+有关 9.5 版的详细信息，请参见 https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["《 Cloud Volumes ONTAP 9.5 发行说明》"^]。
 
 
 
@@ -443,7 +443,7 @@ Cloud Manager 需要为 Cloud Volumes ONTAP 9.5 版本中的关键功能提供�
 "Microsoft.Storage/storageAccounts/delete",
 "Microsoft.Storage/usages/read",
 ----
-您可以在中找到所需权限的完整列表 https://["Cloud Manager 的最新 Azure 策略"^]。
+您可以在中找到所需权限的完整列表 https://s3.amazonaws.com/occm-sample-policies/Policy_for_cloud_Manager_Azure_3.6.1.json["Cloud Manager 的最新 Azure 策略"^]。
 
 link:reference_permissions.html["了解 Cloud Manager 如何使用这些权限"]。
 
@@ -488,7 +488,7 @@ Cloud Manager 不再需要访问存储在 S3 存储分段中的计费报告。Cl
 "ce:GetTags"
 ----
 +
-这些操作包含在最新的中 https://["NetApp 提供的策略"^]。从 NetApp Cloud Central 部署的新系统会自动包含这些权限。
+这些操作包含在最新的中 https://s3.amazonaws.com/occm-sample-policies/Policy_for_Cloud_Manager_3.6.1.json["NetApp 提供的策略"^]。从 NetApp Cloud Central 部署的新系统会自动包含这些权限。
 
 
 
@@ -510,6 +510,6 @@ Cloud Manager 3.6 提供了一项新功能。
 
 === 使用 Cloud Volumes ONTAP 作为 Kubernetes 集群的永久性存储
 
-Cloud Manager 现在可以自动部署 https://["NetApp Trident"^] 在单个 Kubernetes 集群上，以便可以使用 Cloud Volumes ONTAP 作为容器的永久性存储。然后，用户可以使用原生 Kubernetes 接口和构造请求和管理永久性卷，同时利用 ONTAP 的高级数据管理功能，而无需了解任何相关信息。
+Cloud Manager 现在可以自动部署 https://netapp-trident.readthedocs.io/en/stable-v18.10/introduction.html["NetApp Trident"^] 在单个 Kubernetes 集群上，以便可以使用 Cloud Volumes ONTAP 作为容器的永久性存储。然后，用户可以使用原生 Kubernetes 接口和构造请求和管理永久性卷，同时利用 ONTAP 的高级数据管理功能，而无需了解任何相关信息。
 
 link:task_connecting_kubernetes.html["了解如何将 Cloud Volumes ONTAP 系统连接到 Kubernetes 集群"]

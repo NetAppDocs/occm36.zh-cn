@@ -14,7 +14,7 @@ summary: NetApp Cloud Central 为访问和管理 NetApp 云数据服务提供了
 
 
 [role="lead"]
-https://["NetApp Cloud Central"^] 提供一个中央位置，用于访问和管理 NetApp 云数据服务。这些服务使您能够在云中运行关键应用程序、创建自动化灾难恢复站点、备份 SaaS 数据、并在多个云中有效地迁移和控制数据。
+https://cloud.netapp.com["NetApp Cloud Central"^] 提供一个中央位置，用于访问和管理 NetApp 云数据服务。这些服务使您能够在云中运行关键应用程序、创建自动化灾难恢复站点、备份 SaaS 数据、并在多个云中有效地迁移和控制数据。
 
 Cloud Manager 与 NetApp Cloud Central 的集成提供了多种优势、包括简化的部署体验、查看和管理多个云管理系统的单一位置以及集中式用户身份验证。
 

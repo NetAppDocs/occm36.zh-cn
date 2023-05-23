@@ -14,7 +14,7 @@ summary: Cloud Manager 需要权限才能代表您在 AWS 和 Azure 中执行操
 
 
 [role="lead"]
-Cloud Manager 需要权限才能代表您在 AWS 和 Azure 中执行操作。中包括这些权限 https://["NetApp 提供的策略"^]。您可能希望了解 Cloud Manager 使用这些权限执行的操作。
+Cloud Manager 需要权限才能代表您在 AWS 和 Azure 中执行操作。中包括这些权限 https://mysupport.netapp.com/info/web/ECMP11022837.html["NetApp 提供的策略"^]。您可能希望了解 Cloud Manager 使用这些权限执行的操作。
 
 
 

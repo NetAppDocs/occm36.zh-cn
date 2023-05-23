@@ -36,10 +36,10 @@ image:screenshot_ntp_server_api.gif["Swagger 界面的屏幕截图，其中显�
 
 
 
-| 可选：配置 AutoSupport | AutoSupport 会主动监控系统的运行状况，并在默认情况下自动将消息发送给 NetApp 技术支持。如果云管理器管理员在启动您的实例之前向云管理器添加了代理服务器，则 Cloud Volumes ONTAP 将配置为使用该代理服务器处理 AutoSupport 消息。您应该测试 AutoSupport 以确保它可以发送消息。有关说明，请参见 System Manager 帮助或 http://["《 ONTAP 9 系统管理参考》"^]。 
+| 可选：配置 AutoSupport | AutoSupport 会主动监控系统的运行状况，并在默认情况下自动将消息发送给 NetApp 技术支持。如果云管理器管理员在启动您的实例之前向云管理器添加了代理服务器，则 Cloud Volumes ONTAP 将配置为使用该代理服务器处理 AutoSupport 消息。您应该测试 AutoSupport 以确保它可以发送消息。有关说明，请参见 System Manager 帮助或 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"^]。 
 
 
-| 可选：配置 EMS | 事件管理系统 (EMS) 收集并显示有关在 Cloud Volumes ONTAP 系统上发生的事件的信息。要接收事件通知、您可以为特定事件严重性设置事件目标（电子邮件地址、 SNMP 陷阱主机或系统日志服务器）和事件路由。您可以使用 CLI 配置 EMS 。有关说明，请参见 http://["《 ONTAP 9 EMS 配置快速指南》"^]。 
+| 可选：配置 EMS | 事件管理系统 (EMS) 收集并显示有关在 Cloud Volumes ONTAP 系统上发生的事件的信息。要接收事件通知、您可以为特定事件严重性设置事件目标（电子邮件地址、 SNMP 陷阱主机或系统日志服务器）和事件路由。您可以使用 CLI 配置 EMS 。有关说明，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html["《 ONTAP 9 EMS 配置快速指南》"^]。 
 
 
 | 可选：为多个 AWS 可用性区域中的 HA 系统创建 SVM 管理网络接口（ LIF ）  a| 
@@ -52,5 +52,5 @@ network interface create -vserver svm_cloud -lif svm_mgmt -role data -data-proto
 ....
 
 
-| 可选：更改配置文件的备份位置 | Cloud Volumes ONTAP 会自动创建配置备份文件、其中包含有关其正常运行所需的可配置选项的信息。默认情况下， Cloud Volumes ONTAP 会每 8 小时将文件备份到 Cloud Manager 主机。如果要将备份发送到备用位置、可以将位置更改为数据中心或 AWS 中的 FTP 或 HTTP 服务器。例如，您可能已经拥有 FAS 存储系统的备份位置。您可以使用 CLI 更改备份位置。请参见 http://["《 ONTAP 9 系统管理参考》"^]。 
+| 可选：更改配置文件的备份位置 | Cloud Volumes ONTAP 会自动创建配置备份文件、其中包含有关其正常运行所需的可配置选项的信息。默认情况下， Cloud Volumes ONTAP 会每 8 小时将文件备份到 Cloud Manager 主机。如果要将备份发送到备用位置、可以将位置更改为数据中心或 AWS 中的 FTP 或 HTTP 服务器。例如，您可能已经拥有 FAS 存储系统的备份位置。您可以使用 CLI 更改备份位置。请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"^]。 
 |===

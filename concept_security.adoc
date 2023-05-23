@@ -35,7 +35,7 @@ Cloud Volumes ONTAP 支持以下加密技术：
 
 NetApp 卷加密（ NVE ）是一种基于软件的技术，用于一次对一个卷上的空闲数据进行加密。数据， Snapshot 副本和元数据已加密。数据访问由一个唯一的 XTS-AES-256 密钥提供，每个卷一个。
 
-Cloud Volumes ONTAP 通过外部密钥管理服务器支持 NetApp 卷加密。不支持板载密钥管理器。您可以在中找到支持的密钥管理器 http://["NetApp 互操作性表工具"^] 在 * 密钥管理器 * 解决方案下。
+Cloud Volumes ONTAP 通过外部密钥管理服务器支持 NetApp 卷加密。不支持板载密钥管理器。您可以在中找到支持的密钥管理器 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^] 在 * 密钥管理器 * 解决方案下。
 
 您可以使用 CLI 或 System Manager 在新卷或现有卷上启用 NetApp 卷加密。Cloud Manager 不支持 NetApp 卷加密。有关说明，请参见 link:task_encrypting_volumes.html["使用 NetApp 卷加密对卷进行加密"]。
 
@@ -43,7 +43,7 @@ Cloud Volumes ONTAP 通过外部密钥管理服务器支持 NetApp 卷加密。�
 
 === AWS 密钥管理服务
 
-在 AWS 中启动 Cloud Volumes ONTAP 系统时，您可以使用启用数据加密 http://["AWS 密钥管理服务（ KMS ）"^]。Cloud Manager 使用客户主密钥（ CMK ）请求数据密钥。
+在 AWS 中启动 Cloud Volumes ONTAP 系统时，您可以使用启用数据加密 http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["AWS 密钥管理服务（ KMS ）"^]。Cloud Manager 使用客户主密钥（ CMK ）请求数据密钥。
 
 如果要使用此加密选项，则必须确保正确设置 AWS KMS 。有关详细信息，请参见 link:task_setting_up_kms.html["设置 AWS KMS"]。
 
@@ -51,7 +51,7 @@ Cloud Volumes ONTAP 通过外部密钥管理服务器支持 NetApp 卷加密。�
 
 === Azure 存储服务加密
 
-https://["Azure 存储服务加密"^] 默认情况下， Azure 中的 Cloud Volumes ONTAP 数据会启用空闲数据。无需设置。
+https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/["Azure 存储服务加密"^] 默认情况下， Azure 中的 Cloud Volumes ONTAP 数据会启用空闲数据。无需设置。
 
 
 NOTE: Cloud Volumes ONTAP 不支持客户管理的密钥。
@@ -64,9 +64,9 @@ NOTE: Cloud Volumes ONTAP 不支持客户管理的密钥。
 
 称为 _Vscan_ 的 ONTAP 病毒扫描将同类最佳的第三方防病毒软件与 ONTAP 功能相结合，让您可以灵活地控制扫描哪些文件以及何时扫描。
 
-有关 Vscan 支持的供应商，软件和版本的信息，请参见 http://["NetApp 互操作性表"^]。
+有关 Vscan 支持的供应商，软件和版本的信息，请参见 http://mysupport.netapp.com/matrix["NetApp 互操作性表"^]。
 
-有关如何在 ONTAP 系统上配置和管理防病毒功能的信息，请参见 http://["《 ONTAP 9 防病毒配置指南》"^]。
+有关如何在 ONTAP 系统上配置和管理防病毒功能的信息，请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-acg/home.html["《 ONTAP 9 防病毒配置指南》"^]。
 
 
 

@@ -53,7 +53,7 @@ AWS 服务（ AmazonAWS.com ）：
 * 简单存储服务 (S3)
 
 
-确切的端点取决于您部署 Cloud Volumes ONTAP 的区域。 https://["有关详细信息，请参阅 AWS 文档。"^]
+确切的端点取决于您部署 Cloud Volumes ONTAP 的区域。 https://docs.aws.amazon.com/general/latest/gr/rande.html["有关详细信息，请参阅 AWS 文档。"^]
 | 支持 Cloud Manager 在 AWS 中部署和管理 Cloud Volumes ONTAP 。 
 
 
