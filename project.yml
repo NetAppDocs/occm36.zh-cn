@@ -209,7 +209,5 @@ sidebar:
       url: "/reference_user_roles.html"
     - title: 相关链接
       url: "/reference_additional_info.html"
-  - title: 早期版本
-    url: "/reference_earlier_versions.html"
   - title: 法律声明
     url: "/reference_legal_notices.html"
