@@ -1163,16 +1163,6 @@
   <block id="a8fa2551f6408bfa93fe493745bac6f4" category="list-text">启用创建快照的选项、因为快照可以启用系统恢复。</block>
   <block id="bb7e6cfdc4746a614a2674f0e2c56e43" category="list-text">单击 * 关闭 * 。</block>
   <block id="5f2e3fd1b057bcc33ab14fddf0b6d211" category="paragraph">可能需要几分钟才能停止系统。您可以在以后从 " 工作环境 " 页重新启动系统。</block>
-  <block id="bf247a42035ccb395566620f801451c6" category="summary">如果您没有运行最新版本，则可以获得以前版本的 Cloud Manager 的文档。</block>
-  <block id="07d55193182697e6721a80930a82f737" category="doc">早期版本的 Cloud Manager 文档</block>
-  <block id="ecc216112e51b5fcf9a16ded8dabf7d3" category="inline-link">Cloud Manager 3.5</block>
-  <block id="cfc918b9915ac614a17310f450bf2721" category="list-text"><block ref="cfc918b9915ac614a17310f450bf2721" category="inline-link-rx"></block></block>
-  <block id="e3d94d1f3408c8379bdf78d363454ce1" category="inline-link">云管理器 3.4.</block>
-  <block id="38de804ea38bf38231c886d96da268e7" category="list-text"><block ref="38de804ea38bf38231c886d96da268e7" category="inline-link-rx"></block></block>
-  <block id="071d13764bfb9458bd760c388f1767ba" category="inline-link">Cloud Manager 3.3</block>
-  <block id="16402a155f06e6eb36ecc0f5c23fe0c3" category="list-text"><block ref="16402a155f06e6eb36ecc0f5c23fe0c3" category="inline-link-rx"></block></block>
-  <block id="5762b1cbe884ee9e94cfac52c83c4e93" category="inline-link">Cloud Manager 3.2</block>
-  <block id="512d31465e67eb0eaa423ce8c234959e" category="list-text"><block ref="512d31465e67eb0eaa423ce8c234959e" category="inline-link-rx"></block></block>
   <block id="aeb35be25e44a1d83fec9c91a90ce055" category="summary">开始之前、您可能希望更好地了解部署 OnCommand Cloud Manager 和 Cloud Volumes ONTAP 的选项。</block>
   <block id="42f8643eb52a942747937327c72c8361" category="doc">部署概述</block>
   <block id="9e64ab994673cfca3e00592714735d7f" category="section-title">安装 Cloud Manager</block>
@@ -3181,7 +3171,6 @@
   <block id="f90e6605f3b61632417dd0fa03f7a25f" category="sidebar">Cloud Central 集成常见问题解答</block>
   <block id="75396e001838965f1f26327de3cf6d73" category="sidebar">支持的 Cloud Volumes ONTAP 配置</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="sidebar">权限</block>
-  <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">早期版本</block>
   <block id="acc81ea7928b1749431e8b47599e424c" category="doc">Cloud Manager 3.6 中的新增功能</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
   <block id="9b1146da7e8885b360bcba1784bf6d6c" category="inline-image-macro">数字 1</block>
@@ -3203,4 +3192,8 @@
   <block id="832eb2addfeb7baf5b285a22aaeb4161" category="section-title"><block ref="b496ee93dbdd8d3b796a1af3fe777064" category="inline-image-macro-rx" type="image"></block> 提供所需的 Azure 权限</block>
   <block id="55656479963c4d6faa53aa52af17bb58" category="section-title"><block ref="f99fa24d03c6ef96c556af7cdf23810f" category="inline-image-macro-rx" type="image"></block> 从 NetApp Cloud Central 启动 Cloud Manager</block>
   <block id="fc6a1c4bfdea701c7028d4b2604689fb" category="section-title"><block ref="d0f5cff2b8e0ecc91e360a74276cf2dd" category="inline-image-macro-rx" type="image"></block> 使用 Cloud Manager 启动 Cloud Volumes ONTAP</block>
+  <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="section-title">BlueXP</block>
+  <block id="1514a9e798eb61fcbaf1fddb8eb82097" category="paragraph">NetApp BlueXP扩展并增强了Cloud Manager提供的功能。</block>
+  <block id="ab226d70455b3dcdb3cf804792103d43" category="inline-link">转到BlueXP文档</block>
+  <block id="50523074a17d5fe93be8e3f013a747de" category="paragraph"><block ref="50523074a17d5fe93be8e3f013a747de" category="inline-link-rx"></block></block>
 </blocks>
